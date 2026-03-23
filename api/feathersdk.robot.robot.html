@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.robot Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.navigation_platform Module" href="feathersdk.robot.navigation_platform.html" />
+    <link rel="prev" title="feathersdk.robot Package" href="feathersdk.robot.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.navigation_platform.html" title="feathersdk.robot.navigation_platform Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.html" title="feathersdk.robot Package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.robot Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.robot">
+<span id="feathersdk-robot-robot-module"></span><h1>feathersdk.robot.robot Module<a class="headerlink" href="#module-feathersdk.robot.robot" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.robot.</span></span><span class="sig-name descname"><span class="pre">FeatherRobot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#feathersdk.robot.robot.Robot" title="feathersdk.robot.robot.Robot"><code class="xref py py-class docutils literal notranslate"><span class="pre">Robot</span></code></a></p>
+<p>Feather robot implementation with navigation, manipulation, torso, and neck platforms.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize Feather robot with configured platforms.</p>
+<p>Initializes communication manager, battery system, motors manager, and all
+configured platforms (navigation, manipulation, torso, neck). Automatically
+registers systems with power event listeners if battery system is configured.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>robot_name</strong> (<em>str</em>) – Name identifier for the robot</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary with optional keys for each platform</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If E-stop is pressed or initialization fails (unless testing=True)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.clear_motor_errors">
+<span class="sig-name descname"><span class="pre">clear_motor_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.clear_motor_errors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.get_battery_voltage">
+<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.get_battery_voltage" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.Robot">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.robot.</span></span><span class="sig-name descname"><span class="pre">Robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">robot_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SteppableSystem</span></code></p>
+<p>Base robot class for managing multiple systems and control loops.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.robot_loop">
+<span class="sig-name descname"><span class="pre">robot_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.robot_loop" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.start_loop_in_background">
+<span class="sig-name descname"><span class="pre">start_loop_in_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start_loop_in_background" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.robot Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.robot.FeatherRobot"><code class="docutils literal notranslate"><span class="pre">FeatherRobot</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.robot.FeatherRobot.__init__"><code class="docutils literal notranslate"><span class="pre">FeatherRobot.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.FeatherRobot.clear_motor_errors"><code class="docutils literal notranslate"><span class="pre">FeatherRobot.clear_motor_errors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.FeatherRobot.get_battery_voltage"><code class="docutils literal notranslate"><span class="pre">FeatherRobot.get_battery_voltage()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.FeatherRobot.on_abort"><code class="docutils literal notranslate"><span class="pre">FeatherRobot.on_abort()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.Robot"><code class="docutils literal notranslate"><span class="pre">Robot</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.robot.Robot.on_abort"><code class="docutils literal notranslate"><span class="pre">Robot.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.Robot.robot_loop"><code class="docutils literal notranslate"><span class="pre">Robot.robot_loop()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.Robot.start"><code class="docutils literal notranslate"><span class="pre">Robot.start()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robot.Robot.start_loop_in_background"><code class="docutils literal notranslate"><span class="pre">Robot.start_loop_in_background()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.html" title="previous chapter">feathersdk.robot Package</a></li>
+      <li>Next: <a href="feathersdk.robot.navigation_platform.html" title="next chapter">feathersdk.robot.navigation_platform Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.robot.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

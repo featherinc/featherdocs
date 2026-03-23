@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.robstride_neck_platform Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.arm_system Module" href="feathersdk.robot.arm_system.html" />
+    <link rel="prev" title="feathersdk.robot.battery_system Module" href="feathersdk.robot.battery_system.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.arm_system.html" title="feathersdk.robot.arm_system Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.battery_system.html" title="feathersdk.robot.battery_system Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.robstride_neck_platform Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.robstride_neck_platform">
+<span id="feathersdk-robot-robstride-neck-platform-module"></span><h1>feathersdk.robot.robstride_neck_platform Module<a class="headerlink" href="#module-feathersdk.robot.robstride_neck_platform" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.robstride_neck_platform.</span></span><span class="sig-name descname"><span class="pre">RobstrideNeckPlatform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NeckPlatform</span></code></p>
+<p>Platform for controlling Robstride neck motors (pitch and yaw).</p>
+<p>This class manages the neck platform with two motors: pitch (NpC) and yaw (NwC).
+It handles initialization, calibration, movement control, and power management.
+The platform supports position control with configurable velocity and acceleration limits.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.PITCH_MOTOR_NAME">
+<span class="sig-name descname"><span class="pre">PITCH_MOTOR_NAME</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NpC'</span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.PITCH_MOTOR_NAME" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.YAW_MOTOR_NAME">
+<span class="sig-name descname"><span class="pre">YAW_MOTOR_NAME</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'NwC'</span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.YAW_MOTOR_NAME" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the Robstride neck platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motors_manager</strong> (<a class="reference internal" href="feathersdk.robot.motors.html#feathersdk.robot.motors.MotorsManager" title="feathersdk.robot.motors.MotorsManager"><em>MotorsManager</em></a>) – The motors manager instance for controlling motors.</p></li>
+<li><p><strong>power</strong> (<a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><em>BatterySystem</em></a><em>, </em><em>optional</em>) – Battery system for power event handling. If provided,
+the platform will check if recalibration is needed after power cycles.</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary containing motor settings. Must include
+a “motors” key with motor configurations including:
+- id: Motor ID in hexadecimal string format
+- motor_config: Motor configuration dictionary
+- default_velocity_max: Default maximum velocity in rad/s
+- default_acceleration_max: Default maximum acceleration in rad/s^2
+- default_loc_kp: Default location proportional gain</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.disable_motors">
+<span class="sig-name descname"><span class="pre">disable_motors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.disable_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Disable all neck motors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.enable_motors">
+<span class="sig-name descname"><span class="pre">enable_motors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.enable_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Enable all neck motors in position control mode.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_position">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force_update</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_position" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current mechanical positions of all neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>force_update</strong> (<em>bool</em>) – Currently unused, reserved for future implementation.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Dictionary mapping motor names to their mechanical positions in radians.</dt><dd><p>Keys are motor names (e.g., “NpC”, “NwC”).</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Dict[str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_async">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_state_async</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_async" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current state of all neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Dictionary containing motor state with keys:</dt><dd><ul class="simple">
+<li><p>”temp”: Temperature (TimestampedValue)</p></li>
+<li><p>”torque”: Torque (TimestampedValue)</p></li>
+<li><p>”angle”: Angle (TimestampedValue)</p></li>
+<li><p>”velocity”: Velocity (TimestampedValue)</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_sync">
+<span class="sig-name descname"><span class="pre">get_state_sync</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_sync" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current state of all neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Dictionary mapping motor names to their state dict containing:</dt><dd><ul class="simple">
+<li><p>’temp’: current temperature in degrees Celsius</p></li>
+<li><p>’torque’: current torque in newton meters</p></li>
+<li><p>’angle’: current angle in radians</p></li>
+<li><p>’velocity’: current velocity in radians per second</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[str, Dict[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_system_state">
+<span class="sig-name descname"><span class="pre">get_system_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_system_state" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current system state of all neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Dictionary mapping motor names to their calibrated angles.</dt><dd><p>Keys are in the format “{motor_name}_angle” (e.g., “NpC_angle”, “NwC_angle”).
+Values are the calibrated angle in radians.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[str, float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.go_to">
+<span class="sig-name descname"><span class="pre">go_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pitch_in_degrees</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw_in_degrees</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.go_to" title="Link to this definition">¶</a></dt>
+<dd><p>Set target position for neck movement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pitch_in_degrees</strong> (<em>float</em><em>, </em><em>optional</em>) – Target pitch angle in degrees. None to keep current target.
+Must be between -120 and 0 degrees.</p></li>
+<li><p><strong>yaw_in_degrees</strong> (<em>float</em><em>, </em><em>optional</em>) – Target yaw angle in degrees. None to keep current target.
+Must be between -90 and 90 degrees.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If neck is not enabled, not healthy, or currently recalibrating.</p></li>
+<li><p><strong>ValueError</strong> – If pitch or yaw values are outside their valid ranges.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.health_check">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">health_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.health_check" title="Link to this definition">¶</a></dt>
+<dd><p>Perform a comprehensive health check on all neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>Nested dictionary mapping motor names to their health parameters.</dt><dd><p>Each motor’s dictionary contains:
+- “mech_pos”: Mechanical position in radians
+- “loc_ref”: Location reference (target position) in radians
+- “velocity”: Mechanical velocity in rad/s
+- “iqf”: Quadrature current feedback in amperes
+- “vel_max”: Maximum velocity setting in rad/s
+- “acc_set”: Acceleration setting in rad/s^2
+- “loc_kp”: Location proportional gain</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dict[str, Dict[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.look_up">
+<span class="sig-name descname"><span class="pre">look_up</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.look_up" title="Link to this definition">¶</a></dt>
+<dd><p>Move the neck to look straight forward.</p>
+<p>Sets pitch to -90 degrees and yaw to 0 degrees (center position).
+This is typically used as a safe homing position.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.on_abort" title="Link to this definition">¶</a></dt>
+<dd><p>Handle system abort event.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.recalibrate">
+<span class="sig-name descname"><span class="pre">recalibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.recalibrate" title="Link to this definition">¶</a></dt>
+<dd><p>Recalibrate neck motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>verbose</strong> (<em>bool</em>) – If True, passes verbose mode through to motor calibration (see motors manager).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If neck is already recalibrating, or if calibration fails.
+    On failure, healthy_state is set to False and enabled is set to True.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.set_movement_profile">
+<span class="sig-name descname"><span class="pre">set_movement_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_velocity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_acceleration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_jerk</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.set_movement_profile" title="Link to this definition">¶</a></dt>
+<dd><p>Set the movement profile parameters for a specific motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name</strong> (<em>str</em>) – Name of the motor to configure (e.g., “NpC” or “NwC”).</p></li>
+<li><p><strong>max_velocity</strong> (<em>float</em>) – Maximum velocity in rad/s. Must be between 0.1 and
+MAX_POSITION_VELOCITY (20 rad/s).</p></li>
+<li><p><strong>max_acceleration</strong> (<em>float</em>) – Maximum acceleration in rad/s^2. Must be between 0.1 and
+MAX_POSITION_ACCELERATION (30 rad/s^2).</p></li>
+<li><p><strong>max_jerk</strong> (<em>float</em><em>, </em><em>optional</em>) – Maximum jerk (not supported, must be None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If max_velocity or max_acceleration are out of valid range,
+    if max_jerk is not None, or if motor_name is not a valid neck motor.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.sleep_and_disable">
+<span class="sig-name descname"><span class="pre">sleep_and_disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.sleep_and_disable" title="Link to this definition">¶</a></dt>
+<dd><p>Put motors to sleep position and disable them safely.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – Re-raises any exceptions that occur during the sleep process,
+    but ensures motors are disabled in the finally block.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.robstride_neck_platform Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.PITCH_MOTOR_NAME"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.PITCH_MOTOR_NAME</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.YAW_MOTOR_NAME"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.YAW_MOTOR_NAME</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.__init__"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.disable_motors"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.disable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.enable_motors"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.enable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_position"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.get_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_async"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.get_state_async()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_state_sync"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.get_state_sync()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.get_system_state"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.get_system_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.go_to"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.go_to()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.health_check"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.health_check()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.look_up"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.look_up()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.on_abort"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.recalibrate"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.recalibrate()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.set_movement_profile"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.set_movement_profile()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform.sleep_and_disable"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform.sleep_and_disable()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.battery_system.html" title="previous chapter">feathersdk.robot.battery_system Module</a></li>
+      <li>Next: <a href="feathersdk.robot.arm_system.html" title="next chapter">feathersdk.robot.arm_system Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.robstride_neck_platform.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

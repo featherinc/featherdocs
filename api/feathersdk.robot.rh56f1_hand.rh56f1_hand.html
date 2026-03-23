@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.rh56f1_hand.rh56f1_hand Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.motors Package" href="feathersdk.robot.motors.html" />
+    <link rel="prev" title="feathersdk.robot.gripper.i2rt_gripper Module" href="feathersdk.robot.gripper.i2rt_gripper.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.motors.html" title="feathersdk.robot.motors Package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.gripper.i2rt_gripper.html" title="feathersdk.robot.gripper.i2rt_gripper Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.rh56f1_hand.rh56f1_hand Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.rh56f1_hand.rh56f1_hand">
+<span id="feathersdk-robot-rh56f1-hand-rh56f1-hand-module"></span><h1>feathersdk.robot.rh56f1_hand.rh56f1_hand Module<a class="headerlink" href="#module-feathersdk.robot.rh56f1_hand.rh56f1_hand" title="Link to this heading">¶</a></h1>
+<p>RH56F1 EtherCAT Hand Controller - Python API
+Real-time per-finger control via C++ wrapper using ctypes</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">FingerData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temperature</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">status</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Complete data for a single finger</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.angle">
+<span class="sig-name descname"><span class="pre">angle</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.angle" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.current">
+<span class="sig-name descname"><span class="pre">current</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.current" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.error">
+<span class="sig-name descname"><span class="pre">error</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.error" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.finger_id">
+<span class="sig-name descname"><span class="pre">finger_id</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.finger_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.force">
+<span class="sig-name descname"><span class="pre">force</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.force" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.position">
+<span class="sig-name descname"><span class="pre">position</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.status" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.temperature">
+<span class="sig-name descname"><span class="pre">temperature</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.temperature" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">FingerID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Finger ID enumeration for RH56F1 hand</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.INDEX">
+<span class="sig-name descname"><span class="pre">INDEX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.INDEX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.LITTLE">
+<span class="sig-name descname"><span class="pre">LITTLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.LITTLE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.MIDDLE">
+<span class="sig-name descname"><span class="pre">MIDDLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.MIDDLE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.RING">
+<span class="sig-name descname"><span class="pre">RING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.RING" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_BEND">
+<span class="sig-name descname"><span class="pre">THUMB_BEND</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_BEND" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_SIDESWAY">
+<span class="sig-name descname"><span class="pre">THUMB_SIDESWAY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_SIDESWAY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">HandState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fingers</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><span class="pre">FingerData</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tactile_sensors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><span class="pre">TactileSensor</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Complete hand state</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.fingers">
+<span class="sig-name descname"><span class="pre">fingers</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><span class="pre">FingerData</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.fingers" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.tactile_sensors">
+<span class="sig-name descname"><span class="pre">tactile_sensors</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><span class="pre">TactileSensor</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.tactile_sensors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.timestamp" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">RH56F1Hand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lib_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slave_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Python wrapper for RH56F1 EtherCAT hand controller with per-finger data access</p>
+<p>This class provides a Pythonic interface to the C++ EtherCAT library,
+giving you C++ real-time performance with Python convenience.</p>
+<dl class="simple">
+<dt>Finger Numbering (from user manual):</dt><dd><p>1: Little finger
+2: Ring finger
+3: Middle finger
+4: Index finger
+5: Thumb (bend)
+6: Thumb (sidesway)</p>
+</dd>
+<dt>Parameter Ranges:</dt><dd><ul class="simple">
+<li><p>Angle: 0-3600 (0.1 degree units, e.g., 1700 = 170.0°)</p></li>
+<li><p>Force: 0-1000 (device-specific units)</p></li>
+<li><p>Speed: 0-5000 (device-specific units)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MAX">
+<span class="sig-name descname"><span class="pre">ANGLE_MAX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1800</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MAX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MIN">
+<span class="sig-name descname"><span class="pre">ANGLE_MIN</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">600</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FINGER_ANGLE_LIMITS">
+<span class="sig-name descname"><span class="pre">FINGER_ANGLE_LIMITS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{FingerID.LITTLE:</span> <span class="pre">(900,</span> <span class="pre">1740),</span> <span class="pre">FingerID.RING:</span> <span class="pre">(900,</span> <span class="pre">1740),</span> <span class="pre">FingerID.MIDDLE:</span> <span class="pre">(900,</span> <span class="pre">1740),</span> <span class="pre">FingerID.INDEX:</span> <span class="pre">(900,</span> <span class="pre">1740),</span> <span class="pre">FingerID.THUMB_BEND:</span> <span class="pre">(1100,</span> <span class="pre">1450),</span> <span class="pre">FingerID.THUMB_SIDESWAY:</span> <span class="pre">(600,</span> <span class="pre">1800)}</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FINGER_ANGLE_LIMITS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MAX">
+<span class="sig-name descname"><span class="pre">FORCE_MAX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1000</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MAX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MIN">
+<span class="sig-name descname"><span class="pre">FORCE_MIN</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_MAP">
+<span class="sig-name descname"><span class="pre">PDO_MAP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'angle':</span> <span class="pre">(6,</span> <span class="pre">6),</span> <span class="pre">'current':</span> <span class="pre">(18,</span> <span class="pre">6),</span> <span class="pre">'error':</span> <span class="pre">(24,</span> <span class="pre">6),</span> <span class="pre">'force':</span> <span class="pre">(12,</span> <span class="pre">6),</span> <span class="pre">'position':</span> <span class="pre">(0,</span> <span class="pre">6),</span> <span class="pre">'status':</span> <span class="pre">(30,</span> <span class="pre">6),</span> <span class="pre">'tactile':</span> <span class="pre">42,</span> <span class="pre">'temperature':</span> <span class="pre">(36,</span> <span class="pre">6)}</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_MAP" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_OUTPUT_MAP">
+<span class="sig-name descname"><span class="pre">PDO_OUTPUT_MAP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'angle_cmd':</span> <span class="pre">(1,</span> <span class="pre">6),</span> <span class="pre">'enable_set':</span> <span class="pre">0,</span> <span class="pre">'force_cmd':</span> <span class="pre">(7,</span> <span class="pre">6),</span> <span class="pre">'speed_cmd':</span> <span class="pre">(13,</span> <span class="pre">6)}</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_OUTPUT_MAP" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MAX">
+<span class="sig-name descname"><span class="pre">SPEED_MAX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5000</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MAX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MIN">
+<span class="sig-name descname"><span class="pre">SPEED_MIN</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MIN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__del__">
+<span class="sig-name descname"><span class="pre">__del__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__del__" title="Link to this definition">¶</a></dt>
+<dd><p>Destructor: release master when the hand object is garbage-collected.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__enter__">
+<span class="sig-name descname"><span class="pre">__enter__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__enter__" title="Link to this definition">¶</a></dt>
+<dd><p>Context manager entry</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__exit__">
+<span class="sig-name descname"><span class="pre">__exit__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_val</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exc_tb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__exit__" title="Link to this definition">¶</a></dt>
+<dd><p>Context manager exit: release master when leaving the with block.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lib_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">master_index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slave_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the hand controller</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>lib_path</strong> – Path to librh56f1.so (auto-detected if None)</p></li>
+<li><p><strong>master_index</strong> – EtherCAT master index (default: 0)</p></li>
+<li><p><strong>slave_position</strong> – EtherCAT slave position (default: 0)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.calculate_array_index">
+<span class="sig-name descname"><span class="pre">calculate_array_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdo_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.calculate_array_index" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.cleanup">
+<span class="sig-name descname"><span class="pre">cleanup</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.cleanup" title="Link to this definition">¶</a></dt>
+<dd><p>Stop the control loop and deactivate the master, but keep the reservation so start() can be called again without re-requesting the master (avoids ‘Device or resource busy’ on abort/restart).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_all_outputs">
+<span class="sig-name descname"><span class="pre">clear_all_outputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_all_outputs" title="Link to this definition">¶</a></dt>
+<dd><p>Clear all output values and disable motion</p>
+<p>This stops all movement by:
+1. Setting ENABLE_SET to 0 (disable)
+2. Zeroing all angle, force, and speed commands</p>
+<p>Use this when you want to stop the hand from moving.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if successful</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_errors">
+<span class="sig-name descname"><span class="pre">clear_errors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_errors" title="Link to this definition">¶</a></dt>
+<dd><p>Clear all device errors (SDO 0x2000:03), returns True if successful, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.destroy" title="Link to this definition">¶</a></dt>
+<dd><p>Release the EtherCAT master and free resources. Call when the hand will not be used again (e.g. process exit).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.disable_hand">
+<span class="sig-name descname"><span class="pre">disable_hand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.disable_hand" title="Link to this definition">¶</a></dt>
+<dd><p>Disable hand motion control. Returns True if successful, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.enable_hand">
+<span class="sig-name descname"><span class="pre">enable_hand</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.enable_hand" title="Link to this definition">¶</a></dt>
+<dd><p>Enable motion control for all fingers. Returns True if successful, False otherwise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_angles">
+<span class="sig-name descname"><span class="pre">get_all_angles</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_angles" title="Link to this definition">¶</a></dt>
+<dd><p>Get angles for all fingers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_currents">
+<span class="sig-name descname"><span class="pre">get_all_currents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_currents" title="Link to this definition">¶</a></dt>
+<dd><p>Get currents for all fingers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_fingers_data">
+<span class="sig-name descname"><span class="pre">get_all_fingers_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><span class="pre">FingerData</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_fingers_data" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of FingerData objects for all fingers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_forces">
+<span class="sig-name descname"><span class="pre">get_all_forces</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_forces" title="Link to this definition">¶</a></dt>
+<dd><p>Get forces for all fingers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_inputs">
+<span class="sig-name descname"><span class="pre">get_all_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_inputs" title="Link to this definition">¶</a></dt>
+<dd><p>Get all 76 input values (raw)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_tactile_sensors">
+<span class="sig-name descname"><span class="pre">get_all_tactile_sensors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><span class="pre">TactileSensor</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_tactile_sensors" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a list of TactileSensor objects for all tactile sensors (5 finger sensors + 3 palm sensors)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_temperatures">
+<span class="sig-name descname"><span class="pre">get_all_temperatures</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_temperatures" title="Link to this definition">¶</a></dt>
+<dd><p>Get temperatures for all fingers</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_error">
+<span class="sig-name descname"><span class="pre">get_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_error" title="Link to this definition">¶</a></dt>
+<dd><p>Get last error message</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_errors">
+<span class="sig-name descname"><span class="pre">get_errors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_errors" title="Link to this definition">¶</a></dt>
+<dd><p>Get error codes for all fingers (only non-zero errors)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_angle">
+<span class="sig-name descname"><span class="pre">get_finger_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_angle" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the angle of actuator for a specific finger (0x6000:07-0C ANGLEACT) in 0.1 degree units (e.g., 1700 = 170.0 degrees)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_current">
+<span class="sig-name descname"><span class="pre">get_finger_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_current" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the current for a specific finger (0x6000:13-18 CURACT)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_data">
+<span class="sig-name descname"><span class="pre">get_finger_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><span class="pre">FingerData</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_data" title="Link to this definition">¶</a></dt>
+<dd><p>Returns FingerData object for a specific finger</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_error">
+<span class="sig-name descname"><span class="pre">get_finger_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_error" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the error code for a specific finger (0x6000:19-1E ERROR), 0 = no error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_force">
+<span class="sig-name descname"><span class="pre">get_finger_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_force" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the force value for a specific finger (0x6000:0D-12 FORCEACT)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_position">
+<span class="sig-name descname"><span class="pre">get_finger_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_position" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the actuator position for a specific finger (0x6000:01-06 POSACT)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_status">
+<span class="sig-name descname"><span class="pre">get_finger_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_status" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the status for a specific finger (0x6000:1F-24 STATUS)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_temperature">
+<span class="sig-name descname"><span class="pre">get_finger_temperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_temperature" title="Link to this definition">¶</a></dt>
+<dd><p>Returns the temperature in °C for a specific finger (0x6000:25-2A TEMP)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_hand_state">
+<span class="sig-name descname"><span class="pre">get_hand_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState"><span class="pre">HandState</span></a></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_hand_state" title="Link to this definition">¶</a></dt>
+<dd><p>Returns a HandState object with all finger and sensor data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_input">
+<span class="sig-name descname"><span class="pre">get_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_input" title="Link to this definition">¶</a></dt>
+<dd><p>Get specific input value by index (0-75)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_output">
+<span class="sig-name descname"><span class="pre">get_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_output" title="Link to this definition">¶</a></dt>
+<dd><p>Get cached output value by index (0-18)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_tactile_sensor">
+<span class="sig-name descname"><span class="pre">get_tactile_sensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sensor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID"><span class="pre">TactileSensorID</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><span class="pre">TactileSensor</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_tactile_sensor" title="Link to this definition">¶</a></dt>
+<dd><p>Get tactile sensor data (0x6000:2B-4C)</p>
+<p>Based on PDO table:
+- Finger sensors (1-5): 5 values each (Normal, Tangential, Direction, ProximityL, ProximityH)
+- Palm sensors (6-8): 3 values each (Normal, Tangential, Direction) - NO proximity values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sensor_id</strong> – Sensor ID (1-5 for finger sensors, 6-8 for palm sensors)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TactileSensor object with NormalForce, TangentialForce, Direction, ProximityValue or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.initialize" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the EtherCAT controller. Retries once after 2.5s if master is busy (e.g. after previous Robot aborted).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_initialized">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">is_initialized</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_initialized" title="Link to this definition">¶</a></dt>
+<dd><p>True if the controller has been initialized and not yet cleaned up.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_running">
+<span class="sig-name descname"><span class="pre">is_running</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_running" title="Link to this definition">¶</a></dt>
+<dd><p>Check if controller is running</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">open_percent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.move" title="Link to this definition">¶</a></dt>
+<dd><p>Control all 6 fingers by open percentage (0 = fully closed, 1 = fully open).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>open_percent</strong> – List of 6 values in [0, 1] for [little, ring, middle, index, thumb_bend, thumb_sidesway].</p></li>
+<li><p><strong>force</strong> – Force limit(s). Single int (0-1000) for all fingers, or list of 6 ints. Default: FORCE_MAX.</p></li>
+<li><p><strong>speed</strong> – Speed limit(s). Single int (0-5000) for all fingers, or list of 6 ints. Default: SPEED_MAX.</p></li>
+<li><p><strong>enable</strong> – Enable all motors (default: True).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all successful, False otherwise.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_hand_state">
+<span class="sig-name descname"><span class="pre">print_hand_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_hand_state" title="Link to this definition">¶</a></dt>
+<dd><p>Print a formatted view of the complete hand state</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_output_state">
+<span class="sig-name descname"><span class="pre">print_output_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_output_state" title="Link to this definition">¶</a></dt>
+<dd><p>Print current output values being sent to the device</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.read_sdo">
+<span class="sig-name descname"><span class="pre">read_sdo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subindex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.read_sdo" title="Link to this definition">¶</a></dt>
+<dd><p>Read an SDO (Service Data Object) from the device</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_all_fingers_control">
+<span class="sig-name descname"><span class="pre">set_all_fingers_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angles</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speeds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_all_fingers_control" title="Link to this definition">¶</a></dt>
+<dd><p>Control all 6 fingers at once</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angles</strong> – List of 6 target angles [little, ring, middle, index, thumb_bend, thumb_sidesway]</p></li>
+<li><p><strong>forces</strong> – List of 6 force limits (one per finger)</p></li>
+<li><p><strong>speeds</strong> – List of 6 speed limits (one per finger)</p></li>
+<li><p><strong>enable</strong> – Enable all motors (default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all successful, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_finger_control">
+<span class="sig-name descname"><span class="pre">set_finger_control</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">finger_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID" title="feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><span class="pre">FingerID</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_finger_control" title="Link to this definition">¶</a></dt>
+<dd><p>Control a specific finger</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>finger_id</strong> – FingerID (1-6)</p></li>
+<li><p><strong>angle</strong> – Target angle (0-3600 = 0-360 degrees in 0.1 degree units)</p></li>
+<li><p><strong>force</strong> – Force/torque limit (0-1000)</p></li>
+<li><p><strong>speed</strong> – Speed limit (0-5000)</p></li>
+<li><p><strong>enable</strong> – Enable motor (default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if successful, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_output">
+<span class="sig-name descname"><span class="pre">set_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_output" title="Link to this definition">¶</a></dt>
+<dd><p>Set specific output value by index (0-18)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.start" title="Link to this definition">¶</a></dt>
+<dd><p>Start the real-time control loop</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.stop" title="Link to this definition">¶</a></dt>
+<dd><p>Stop the real-time control loop and clear all outputs</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.wait_for_operational">
+<span class="sig-name descname"><span class="pre">wait_for_operational</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0.1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.wait_for_operational" title="Link to this definition">¶</a></dt>
+<dd><p>Wait for the device to enter operational state and start providing data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> – Maximum time to wait in seconds (default: 5.0)</p></li>
+<li><p><strong>check_interval</strong> – How often to check for data in seconds (default: 0.1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if device is operational (providing non-zero data), False if timeout</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The EtherCAT device typically takes 2-3 seconds to transition through
+INIT → PREOP → SAFEOP → OPERATIONAL states after starting.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.write_sdo">
+<span class="sig-name descname"><span class="pre">write_sdo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subindex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.write_sdo" title="Link to this definition">¶</a></dt>
+<dd><p>Write an SDO (Service Data Object) to the device</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">TactileSensor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">normal_force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tangential_force</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_low</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proximity_high</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Tactile sensor data for one sensor</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.direction">
+<span class="sig-name descname"><span class="pre">direction</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.direction" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.normal_force">
+<span class="sig-name descname"><span class="pre">normal_force</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.normal_force" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_high">
+<span class="sig-name descname"><span class="pre">proximity_high</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_high" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_low">
+<span class="sig-name descname"><span class="pre">proximity_low</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_low" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.tangential_force">
+<span class="sig-name descname"><span class="pre">tangential_force</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.tangential_force" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.rh56f1_hand.rh56f1_hand.</span></span><span class="sig-name descname"><span class="pre">TactileSensorID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">IntEnum</span></code></p>
+<p>Sensor ID enumeration for RH56F1 hand</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.INDEX">
+<span class="sig-name descname"><span class="pre">INDEX</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.INDEX" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.LITTLE">
+<span class="sig-name descname"><span class="pre">LITTLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.LITTLE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.MIDDLE">
+<span class="sig-name descname"><span class="pre">MIDDLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.MIDDLE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_LEFT">
+<span class="sig-name descname"><span class="pre">PALM_LEFT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_LEFT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_MIDDLE">
+<span class="sig-name descname"><span class="pre">PALM_MIDDLE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">7</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_MIDDLE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_RIGHT">
+<span class="sig-name descname"><span class="pre">PALM_RIGHT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_RIGHT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.RING">
+<span class="sig-name descname"><span class="pre">RING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.RING" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.THUMB">
+<span class="sig-name descname"><span class="pre">THUMB</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></span><a class="headerlink" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.THUMB" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.rh56f1_hand.rh56f1_hand Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><code class="docutils literal notranslate"><span class="pre">FingerData</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.angle"><code class="docutils literal notranslate"><span class="pre">FingerData.angle</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.current"><code class="docutils literal notranslate"><span class="pre">FingerData.current</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.error"><code class="docutils literal notranslate"><span class="pre">FingerData.error</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.finger_id"><code class="docutils literal notranslate"><span class="pre">FingerData.finger_id</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.force"><code class="docutils literal notranslate"><span class="pre">FingerData.force</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.position"><code class="docutils literal notranslate"><span class="pre">FingerData.position</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.status"><code class="docutils literal notranslate"><span class="pre">FingerData.status</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData.temperature"><code class="docutils literal notranslate"><span class="pre">FingerData.temperature</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><code class="docutils literal notranslate"><span class="pre">FingerID</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.INDEX"><code class="docutils literal notranslate"><span class="pre">FingerID.INDEX</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.LITTLE"><code class="docutils literal notranslate"><span class="pre">FingerID.LITTLE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.MIDDLE"><code class="docutils literal notranslate"><span class="pre">FingerID.MIDDLE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.RING"><code class="docutils literal notranslate"><span class="pre">FingerID.RING</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_BEND"><code class="docutils literal notranslate"><span class="pre">FingerID.THUMB_BEND</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID.THUMB_SIDESWAY"><code class="docutils literal notranslate"><span class="pre">FingerID.THUMB_SIDESWAY</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState"><code class="docutils literal notranslate"><span class="pre">HandState</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.fingers"><code class="docutils literal notranslate"><span class="pre">HandState.fingers</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.tactile_sensors"><code class="docutils literal notranslate"><span class="pre">HandState.tactile_sensors</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState.timestamp"><code class="docutils literal notranslate"><span class="pre">HandState.timestamp</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MAX"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.ANGLE_MAX</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.ANGLE_MIN"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.ANGLE_MIN</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FINGER_ANGLE_LIMITS"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.FINGER_ANGLE_LIMITS</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MAX"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.FORCE_MAX</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.FORCE_MIN"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.FORCE_MIN</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_MAP"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.PDO_MAP</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.PDO_OUTPUT_MAP"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.PDO_OUTPUT_MAP</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MAX"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.SPEED_MAX</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.SPEED_MIN"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.SPEED_MIN</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__del__"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.__del__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__enter__"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.__enter__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__exit__"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.__exit__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.__init__"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.calculate_array_index"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.calculate_array_index()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.cleanup"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.cleanup()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_all_outputs"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.clear_all_outputs()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.clear_errors"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.clear_errors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.destroy"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.destroy()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.disable_hand"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.disable_hand()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.enable_hand"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.enable_hand()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_angles"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_angles()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_currents"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_currents()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_fingers_data"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_fingers_data()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_forces"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_forces()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_inputs"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_inputs()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_tactile_sensors"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_tactile_sensors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_all_temperatures"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_all_temperatures()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_error"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_error()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_errors"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_errors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_angle"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_angle()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_current"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_current()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_data"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_data()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_error"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_error()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_force"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_force()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_position"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_status"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_status()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_finger_temperature"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_finger_temperature()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_hand_state"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_hand_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_input"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_input()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_output"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_output()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.get_tactile_sensor"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.get_tactile_sensor()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.initialize"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.initialize()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_initialized"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.is_initialized</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.is_running"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.is_running()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.move"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.move()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_hand_state"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.print_hand_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.print_output_state"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.print_output_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.read_sdo"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.read_sdo()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_all_fingers_control"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.set_all_fingers_control()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_finger_control"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.set_finger_control()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.set_output"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.set_output()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.start"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.start()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.stop"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.stop()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.wait_for_operational"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.wait_for_operational()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand.write_sdo"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand.write_sdo()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><code class="docutils literal notranslate"><span class="pre">TactileSensor</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.direction"><code class="docutils literal notranslate"><span class="pre">TactileSensor.direction</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.normal_force"><code class="docutils literal notranslate"><span class="pre">TactileSensor.normal_force</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_high"><code class="docutils literal notranslate"><span class="pre">TactileSensor.proximity_high</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.proximity_low"><code class="docutils literal notranslate"><span class="pre">TactileSensor.proximity_low</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor.tangential_force"><code class="docutils literal notranslate"><span class="pre">TactileSensor.tangential_force</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID"><code class="docutils literal notranslate"><span class="pre">TactileSensorID</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.INDEX"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.INDEX</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.LITTLE"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.LITTLE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.MIDDLE"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.MIDDLE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_LEFT"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.PALM_LEFT</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_MIDDLE"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.PALM_MIDDLE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.PALM_RIGHT"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.PALM_RIGHT</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.RING"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.RING</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID.THUMB"><code class="docutils literal notranslate"><span class="pre">TactileSensorID.THUMB</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.gripper.i2rt_gripper.html" title="previous chapter">feathersdk.robot.gripper.i2rt_gripper Module</a></li>
+      <li>Next: <a href="feathersdk.robot.motors.html" title="next chapter">feathersdk.robot.motors Package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.rh56f1_hand.rh56f1_hand.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

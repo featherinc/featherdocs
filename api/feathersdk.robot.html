@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot Package &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.robot Module" href="feathersdk.robot.robot.html" />
+    <link rel="prev" title="feathersdk Package" href="feathersdk.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.robot.html" title="feathersdk.robot.robot Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.html" title="feathersdk Package"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" accesskey="U">feathersdk Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot Package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot">
+<span id="feathersdk-robot-package"></span><h1>feathersdk.robot Package<a class="headerlink" href="#module-feathersdk.robot" title="Link to this heading">¶</a></h1>
+<section id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.robot.html">feathersdk.robot.robot Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.robot.html#feathersdk.robot.robot.FeatherRobot"><code class="docutils literal notranslate"><span class="pre">FeatherRobot</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.robot.html#feathersdk.robot.robot.Robot"><code class="docutils literal notranslate"><span class="pre">Robot</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.navigation_platform.html">feathersdk.robot.navigation_platform Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.navigation_platform.html#feathersdk.robot.navigation_platform.NavigationMotorError"><code class="docutils literal notranslate"><span class="pre">NavigationMotorError</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.navigation_platform.html#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.navigation_platform.html#feathersdk.robot.navigation_platform.VelocityNavigationPlanner"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.battery_system.html">feathersdk.robot.battery_system Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem"><code class="docutils literal notranslate"><span class="pre">BatterySystem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.DualBatterySystem"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.DualBatterySystemPico"><code class="docutils literal notranslate"><span class="pre">DualBatterySystemPico</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.PowerEvent"><code class="docutils literal notranslate"><span class="pre">PowerEvent</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.PowerEventListener"><code class="docutils literal notranslate"><span class="pre">PowerEventListener</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.binary_search_max_above"><code class="docutils literal notranslate"><span class="pre">binary_search_max_above()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.find_pico_port"><code class="docutils literal notranslate"><span class="pre">find_pico_port()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.i2c_read"><code class="docutils literal notranslate"><span class="pre">i2c_read()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.i2c_write"><code class="docutils literal notranslate"><span class="pre">i2c_write()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.robstride_neck_platform.html">feathersdk.robot.robstride_neck_platform Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.robstride_neck_platform.html#feathersdk.robot.robstride_neck_platform.RobstrideNeckPlatform"><code class="docutils literal notranslate"><span class="pre">RobstrideNeckPlatform</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.arm_system.html">feathersdk.robot.arm_system Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.arm_system.html#feathersdk.robot.arm_system.ArmSystem"><code class="docutils literal notranslate"><span class="pre">ArmSystem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.manipulation_platform.html">feathersdk.robot.manipulation_platform Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.manipulation_platform.html#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.torso_platform.html">feathersdk.robot.torso_platform Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionCommands"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionControlMode"><code class="docutils literal notranslate"><span class="pre">EZMotionControlMode</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionHomingMethod"><code class="docutils literal notranslate"><span class="pre">EZMotionHomingMethod</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionMotor"><code class="docutils literal notranslate"><span class="pre">EZMotionMotor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionOperationState"><code class="docutils literal notranslate"><span class="pre">EZMotionOperationState</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.EZMotionTorsoPlatform"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.TorsoPlatform"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.overwrite_file"><code class="docutils literal notranslate"><span class="pre">overwrite_file()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.torso_platform.html#feathersdk.robot.torso_platform.read_array_from_file"><code class="docutils literal notranslate"><span class="pre">read_array_from_file()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.gripper.i2rt_gripper.html">feathersdk.robot.gripper.i2rt_gripper Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.gripper.i2rt_gripper.html#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper"><code class="docutils literal notranslate"><span class="pre">I2RTGripper</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html">feathersdk.robot.rh56f1_hand.rh56f1_hand Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerData"><code class="docutils literal notranslate"><span class="pre">FingerData</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.FingerID"><code class="docutils literal notranslate"><span class="pre">FingerID</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.HandState"><code class="docutils literal notranslate"><span class="pre">HandState</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.RH56F1Hand"><code class="docutils literal notranslate"><span class="pre">RH56F1Hand</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensor"><code class="docutils literal notranslate"><span class="pre">TactileSensor</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html#feathersdk.robot.rh56f1_hand.rh56f1_hand.TactileSensorID"><code class="docutils literal notranslate"><span class="pre">TactileSensorID</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="feathersdk.robot.motors.html">feathersdk.robot.motors Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.motors.html#feathersdk.robot.motors.MotorsManager"><code class="docutils literal notranslate"><span class="pre">MotorsManager</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.motors.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feathersdk.robot.motors.html#subpackages">Subpackages</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot Package</a><ul>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+      <li>Previous: <a href="feathersdk.html" title="previous chapter">feathersdk Package</a></li>
+      <li>Next: <a href="feathersdk.robot.robot.html" title="next chapter">feathersdk.robot.robot Module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

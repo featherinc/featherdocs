@@ -1,0 +1,23 @@
+# Feather SDK Documentation
+
+Documentation for SDK version **{{ sdk_version }}**.
+
+Welcome to the Feather SDK documentation.
+
+## Package Overview
+
+The Feather SDK is organized into the following main packages:
+
+- **robot** - Robot control and platform modules
+- **comms** - Communication and networking modules  
+- **utils** - Utility functions and helpers
+
+## API Reference
+
+```{toctree}
+:maxdepth: 3
+:caption: API Reference
+
+api/feathersdk
+```
+

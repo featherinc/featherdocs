@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.gripper.i2rt_gripper Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.rh56f1_hand.rh56f1_hand Module" href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html" />
+    <link rel="prev" title="feathersdk.robot.torso_platform Module" href="feathersdk.robot.torso_platform.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html" title="feathersdk.robot.rh56f1_hand.rh56f1_hand Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.torso_platform.html" title="feathersdk.robot.torso_platform Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.gripper.i2rt_gripper Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.gripper.i2rt_gripper">
+<span id="feathersdk-robot-gripper-i2rt-gripper-module"></span><h1>feathersdk.robot.gripper.i2rt_gripper Module<a class="headerlink" href="#module-feathersdk.robot.gripper.i2rt_gripper" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.gripper.i2rt_gripper.</span></span><span class="sig-name descname"><span class="pre">I2RTGripper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DamiaoMotor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>I2RT Gripper interface for high-level gripper control.</p>
+<p>This class provides high-level control methods for the gripper, delegating
+all firmware communication to the DamiaoMotor class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DamiaoMotor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize the I2RT Gripper and determine healthy state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor</strong> (<em>DamiaoMotor</em>) – DamiaoMotor instance containing motor configuration and firmware interface.</p></li>
+<li><p><strong>power</strong> (<a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><em>BatterySystem</em></a><em>, </em><em>optional</em>) – BatterySystem instance for power state tracking. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_constant_torque">
+<span class="sig-name descname"><span class="pre">apply_constant_torque</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torque</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_constant_torque" title="Link to this definition">¶</a></dt>
+<dd><p>Apply constant torque to the gripper in the desired direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>torque</strong> (<em>float</em>) – Target torque in Nm. Positive for closing, negative for opening.</p></li>
+<li><p><strong>kd</strong> (<em>float</em>) – Damping gain for torque control.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If damping gain or torque values are outside valid ranges.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_torque_and_hold_position">
+<span class="sig-name descname"><span class="pre">apply_torque_and_hold_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">torque</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holding_kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">holding_kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_torque_and_hold_position" title="Link to this definition">¶</a></dt>
+<dd><p>Apply torque until velocity drops below threshold, then hold position.</p>
+<p>Applies constant torque until the gripper reaches a break condition (low velocity
+for 1 second or velocity &lt; 0.05 with sufficient torque), then switches to position
+control to hold the current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>torque</strong> (<em>float</em>) – Torque to apply in Nm. Positive for closing, negative for opening.</p></li>
+<li><p><strong>kd</strong> (<em>float</em>) – Damping gain for torque control phase.</p></li>
+<li><p><strong>holding_kp</strong> (<em>float</em>) – Position gain for holding position after break condition.</p></li>
+<li><p><strong>holding_kd</strong> (<em>float</em>) – Damping gain for holding position after break condition.</p></li>
+<li><p><strong>verbose</strong> (<em>bool</em>) – Enable verbose debug output. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If damping gain or torque values are outside valid ranges.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.clear_error">
+<span class="sig-name descname"><span class="pre">clear_error</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.clear_error" title="Link to this definition">¶</a></dt>
+<dd><p>Clear motor error state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.disable">
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.disable" title="Link to this definition">¶</a></dt>
+<dd><p>Disable the gripper motor.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.enable">
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.enable" title="Link to this definition">¶</a></dt>
+<dd><p>Enable the gripper motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current motor state after enabling.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>FeedbackFrameInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.get_state" title="Link to this definition">¶</a></dt>
+<dd><p>Get the current gripper state without enabling the motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current motor state containing position, velocity, torque, and temperatures.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>FeedbackFrameInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.go_to_position">
+<span class="sig-name descname"><span class="pre">go_to_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.go_to_position" title="Link to this definition">¶</a></dt>
+<dd><p>Move gripper to a specific position using position control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<em>float</em>) – Target position in radians.</p></li>
+<li><p><strong>kp</strong> (<em>float</em>) – Position gain.</p></li>
+<li><p><strong>kd</strong> (<em>float</em>) – Damping gain. Must be greater than KD_MIN.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If gripper is not in a healthy state (needs recalibration).</p></li>
+<li><p><strong>ValueError</strong> – If position is out of valid range or gains are invalid.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.hold_current_position">
+<span class="sig-name descname"><span class="pre">hold_current_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">FeedbackFrameInfo</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.hold_current_position" title="Link to this definition">¶</a></dt>
+<dd><p>Hold the gripper at its current position using position control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kp</strong> (<em>float</em>) – Position gain for position control.</p></li>
+<li><p><strong>kd</strong> (<em>float</em>) – Damping gain for position control.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Current motor state after setting hold command.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>FeedbackFrameInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.recalibrate">
+<span class="sig-name descname"><span class="pre">recalibrate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.recalibrate" title="Link to this definition">¶</a></dt>
+<dd><p>Recalibrate the gripper by finding full range of motion.</p>
+<p>Opens gripper to find minimum position, saves zero position, closes gripper
+to find maximum position, saves calibration limits, and returns to open position.
+Sets healthy_state to True upon successful completion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If any step of the calibration process fails, including invalid
+    calibration limits or errors during movement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.gripper.i2rt_gripper Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper"><code class="docutils literal notranslate"><span class="pre">I2RTGripper</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.__init__"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_constant_torque"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.apply_constant_torque()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.apply_torque_and_hold_position"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.apply_torque_and_hold_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.clear_error"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.clear_error()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.disable"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.disable()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.enable"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.enable()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.get_state"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.get_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.go_to_position"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.go_to_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.hold_current_position"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.hold_current_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.gripper.i2rt_gripper.I2RTGripper.recalibrate"><code class="docutils literal notranslate"><span class="pre">I2RTGripper.recalibrate()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.torso_platform.html" title="previous chapter">feathersdk.robot.torso_platform Module</a></li>
+      <li>Next: <a href="feathersdk.robot.rh56f1_hand.rh56f1_hand.html" title="next chapter">feathersdk.robot.rh56f1_hand.rh56f1_hand Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.gripper.i2rt_gripper.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

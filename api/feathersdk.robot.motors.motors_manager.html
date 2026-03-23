@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.motors.motors_manager Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.comms Package" href="feathersdk.comms.html" />
+    <link rel="prev" title="feathersdk.robot.motors.motor Module" href="feathersdk.robot.motors.motor.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.comms.html" title="feathersdk.comms Package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.motors.motor.html" title="feathersdk.robot.motors.motor Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" >feathersdk.robot Package</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="feathersdk.robot.motors.html" accesskey="U">feathersdk.robot.motors Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.motors.motors_manager Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.motors.motors_manager">
+<span id="feathersdk-robot-motors-motors-manager-module"></span><h1>feathersdk.robot.motors.motors_manager Module<a class="headerlink" href="#module-feathersdk.robot.motors.motors_manager" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">CalibrationState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Represents the calibration and health state of a motor system.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.CALIBRATION_FAILED">
+<span class="sig-name descname"><span class="pre">CALIBRATION_FAILED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'calibration_failed'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.CALIBRATION_FAILED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.HEALTHY">
+<span class="sig-name descname"><span class="pre">HEALTHY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'healthy'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.HEALTHY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.OUT_OF_RANGE">
+<span class="sig-name descname"><span class="pre">OUT_OF_RANGE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'out_of_range'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.OUT_OF_RANGE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.RECALIBRATING">
+<span class="sig-name descname"><span class="pre">RECALIBRATING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'recalibrating'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.RECALIBRATING" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.UNCALIBRATED">
+<span class="sig-name descname"><span class="pre">UNCALIBRATED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uncalibrated'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.UNCALIBRATED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationState.UNINITIALIZED">
+<span class="sig-name descname"><span class="pre">UNINITIALIZED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'uninitialized'</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationState.UNINITIALIZED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">CalibrationWarnings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Flag</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings.HOMING_POSITION_NONZERO">
+<span class="sig-name descname"><span class="pre">HOMING_POSITION_NONZERO</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.HOMING_POSITION_NONZERO" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings.LOWER_LIMIT_MISMATCH">
+<span class="sig-name descname"><span class="pre">LOWER_LIMIT_MISMATCH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.LOWER_LIMIT_MISMATCH" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings.NONE">
+<span class="sig-name descname"><span class="pre">NONE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.NONE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings.RANGE_MISMATCH">
+<span class="sig-name descname"><span class="pre">RANGE_MISMATCH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.RANGE_MISMATCH" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.CalibrationWarnings.UPPER_LIMIT_MISMATCH">
+<span class="sig-name descname"><span class="pre">UPPER_LIMIT_MISMATCH</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.UPPER_LIMIT_MISMATCH" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.FamilyConfig">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">FamilyConfig</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.FamilyConfig" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TypedDict</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.FamilyConfig.safe_stop_policy">
+<span class="sig-name descname"><span class="pre">safe_stop_policy</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy" title="feathersdk.robot.motors.motors_manager.SafeStopPolicy"><span class="pre">SafeStopPolicy</span></a></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.FamilyConfig.safe_stop_policy" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorCalibrationError">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">MotorCalibrationError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorCalibrationError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised when motor calibration fails or motor doesn’t respond as expected during calibration.</p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorNotFoundError">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">MotorNotFoundError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorNotFoundError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Raised when attempting to access a motor that does not exist in the motors map.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">MotorsManager</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles sending commands to and receiving feedback from motors.
+Handles caching the state of the motors.
+Abstractions to make it easy to work with motors.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop">
+<span class="sig-name descname"><span class="pre">activate_compliance_mode_deceleration_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.add_motors">
+<span class="sig-name descname"><span class="pre">add_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.add_motors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range">
+<span class="sig-name descname"><span class="pre">check_motors_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main">
+<span class="sig-name descname"><span class="pre">compliance_mode_main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.disable">
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.disable" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.enable">
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.enable" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.find_motors">
+<span class="sig-name descname"><span class="pre">find_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.find_motors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.get_motor">
+<span class="sig-name descname"><span class="pre">get_motor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.get_motor" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motor_families">
+<span class="sig-name descname"><span class="pre">motor_families</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RobstrideMotor</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_compliance_threads">
+<span class="sig-name descname"><span class="pre">motor_families_compliance_threads</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="feathersdk.utils.common.html#feathersdk.utils.common.FeatherThread" title="feathersdk.utils.common.FeatherThread"><span class="pre">FeatherThread</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_compliance_threads" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_config">
+<span class="sig-name descname"><span class="pre">motor_families_config</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.FamilyConfig" title="feathersdk.robot.motors.motors_manager.FamilyConfig"><span class="pre">FamilyConfig</span></a><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_config" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motors">
+<span class="sig-name descname"><span class="pre">motors</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RobstrideMotor</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motors_by_id">
+<span class="sig-name descname"><span class="pre">motors_by_id</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RobstrideMotor</span><span class="p"><span class="pre">]</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_by_id" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode">
+<span class="sig-name descname"><span class="pre">motors_in_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message">
+<span class="sig-name descname"><span class="pre">on_can_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_fork">
+<span class="sig-name descname"><span class="pre">on_fork</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_fork" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message">
+<span class="sig-name descname"><span class="pre">on_motor_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message">
+<span class="sig-name descname"><span class="pre">on_tcp_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.operation_command">
+<span class="sig-name descname"><span class="pre">operation_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.operation_command" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.ping">
+<span class="sig-name descname"><span class="pre">ping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.ping" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async">
+<span class="sig-name descname"><span class="pre">read_current_state_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync">
+<span class="sig-name descname"><span class="pre">read_current_state_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param">
+<span class="sig-name descname"><span class="pre">read_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async">
+<span class="sig-name descname"><span class="pre">read_param_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync">
+<span class="sig-name descname"><span class="pre">read_param_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle">
+<span class="sig-name descname"><span class="pre">recover_from_power_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands">
+<span class="sig-name descname"><span class="pre">send_operation_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode">
+<span class="sig-name descname"><span class="pre">set_run_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position">
+<span class="sig-name descname"><span class="pre">set_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity">
+<span class="sig-name descname"><span class="pre">set_target_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode">
+<span class="sig-name descname"><span class="pre">stop_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode">
+<span class="sig-name descname"><span class="pre">trigger_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.write_param">
+<span class="sig-name descname"><span class="pre">write_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.write_param" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.zero_position">
+<span class="sig-name descname"><span class="pre">zero_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.zero_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.SafeStopPolicy">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.motors.motors_manager.</span></span><span class="sig-name descname"><span class="pre">SafeStopPolicy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.SafeStopPolicy.COMPLIANCE_MODE">
+<span class="sig-name descname"><span class="pre">COMPLIANCE_MODE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy.COMPLIANCE_MODE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.SafeStopPolicy.DISABLE_MOTORS">
+<span class="sig-name descname"><span class="pre">DISABLE_MOTORS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy.DISABLE_MOTORS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.motors.motors_manager Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState"><code class="docutils literal notranslate"><span class="pre">CalibrationState</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.CALIBRATION_FAILED"><code class="docutils literal notranslate"><span class="pre">CalibrationState.CALIBRATION_FAILED</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.HEALTHY"><code class="docutils literal notranslate"><span class="pre">CalibrationState.HEALTHY</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.OUT_OF_RANGE"><code class="docutils literal notranslate"><span class="pre">CalibrationState.OUT_OF_RANGE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.RECALIBRATING"><code class="docutils literal notranslate"><span class="pre">CalibrationState.RECALIBRATING</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.UNCALIBRATED"><code class="docutils literal notranslate"><span class="pre">CalibrationState.UNCALIBRATED</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationState.UNINITIALIZED"><code class="docutils literal notranslate"><span class="pre">CalibrationState.UNINITIALIZED</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.HOMING_POSITION_NONZERO"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings.HOMING_POSITION_NONZERO</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.LOWER_LIMIT_MISMATCH"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings.LOWER_LIMIT_MISMATCH</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.NONE"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings.NONE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.RANGE_MISMATCH"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings.RANGE_MISMATCH</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.CalibrationWarnings.UPPER_LIMIT_MISMATCH"><code class="docutils literal notranslate"><span class="pre">CalibrationWarnings.UPPER_LIMIT_MISMATCH</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.FamilyConfig"><code class="docutils literal notranslate"><span class="pre">FamilyConfig</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.FamilyConfig.safe_stop_policy"><code class="docutils literal notranslate"><span class="pre">FamilyConfig.safe_stop_policy</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorCalibrationError"><code class="docutils literal notranslate"><span class="pre">MotorCalibrationError</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorNotFoundError"><code class="docutils literal notranslate"><span class="pre">MotorNotFoundError</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager"><code class="docutils literal notranslate"><span class="pre">MotorsManager</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop"><code class="docutils literal notranslate"><span class="pre">MotorsManager.activate_compliance_mode_deceleration_stop()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.add_motors"><code class="docutils literal notranslate"><span class="pre">MotorsManager.add_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range"><code class="docutils literal notranslate"><span class="pre">MotorsManager.check_motors_in_range()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main"><code class="docutils literal notranslate"><span class="pre">MotorsManager.compliance_mode_main()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.disable"><code class="docutils literal notranslate"><span class="pre">MotorsManager.disable()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.enable"><code class="docutils literal notranslate"><span class="pre">MotorsManager.enable()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.find_motors"><code class="docutils literal notranslate"><span class="pre">MotorsManager.find_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.get_motor"><code class="docutils literal notranslate"><span class="pre">MotorsManager.get_motor()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motor_families</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_compliance_threads"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motor_families_compliance_threads</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motor_families_config"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motor_families_config</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motors</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_by_id"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motors_by_id</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode"><code class="docutils literal notranslate"><span class="pre">MotorsManager.motors_in_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_abort"><code class="docutils literal notranslate"><span class="pre">MotorsManager.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message"><code class="docutils literal notranslate"><span class="pre">MotorsManager.on_can_message()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_fork"><code class="docutils literal notranslate"><span class="pre">MotorsManager.on_fork()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message"><code class="docutils literal notranslate"><span class="pre">MotorsManager.on_motor_message()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message"><code class="docutils literal notranslate"><span class="pre">MotorsManager.on_tcp_message()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.operation_command"><code class="docutils literal notranslate"><span class="pre">MotorsManager.operation_command()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.ping"><code class="docutils literal notranslate"><span class="pre">MotorsManager.ping()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async"><code class="docutils literal notranslate"><span class="pre">MotorsManager.read_current_state_async()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync"><code class="docutils literal notranslate"><span class="pre">MotorsManager.read_current_state_sync()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param"><code class="docutils literal notranslate"><span class="pre">MotorsManager.read_param()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async"><code class="docutils literal notranslate"><span class="pre">MotorsManager.read_param_async()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync"><code class="docutils literal notranslate"><span class="pre">MotorsManager.read_param_sync()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle"><code class="docutils literal notranslate"><span class="pre">MotorsManager.recover_from_power_cycle()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands"><code class="docutils literal notranslate"><span class="pre">MotorsManager.send_operation_commands()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode"><code class="docutils literal notranslate"><span class="pre">MotorsManager.set_run_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position"><code class="docutils literal notranslate"><span class="pre">MotorsManager.set_target_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity"><code class="docutils literal notranslate"><span class="pre">MotorsManager.set_target_velocity()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode"><code class="docutils literal notranslate"><span class="pre">MotorsManager.stop_compliance_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode"><code class="docutils literal notranslate"><span class="pre">MotorsManager.trigger_compliance_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.write_param"><code class="docutils literal notranslate"><span class="pre">MotorsManager.write_param()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorsManager.zero_position"><code class="docutils literal notranslate"><span class="pre">MotorsManager.zero_position()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy"><code class="docutils literal notranslate"><span class="pre">SafeStopPolicy</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy.COMPLIANCE_MODE"><code class="docutils literal notranslate"><span class="pre">SafeStopPolicy.COMPLIANCE_MODE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy.DISABLE_MOTORS"><code class="docutils literal notranslate"><span class="pre">SafeStopPolicy.DISABLE_MOTORS</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+  <li><a href="feathersdk.robot.motors.html">feathersdk.robot.motors Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.motors.motor.html" title="previous chapter">feathersdk.robot.motors.motor Module</a></li>
+      <li>Next: <a href="feathersdk.comms.html" title="next chapter">feathersdk.comms Package</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.motors.motors_manager.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

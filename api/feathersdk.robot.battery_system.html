@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.battery_system Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.robstride_neck_platform Module" href="feathersdk.robot.robstride_neck_platform.html" />
+    <link rel="prev" title="feathersdk.robot.navigation_platform Module" href="feathersdk.robot.navigation_platform.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.robstride_neck_platform.html" title="feathersdk.robot.robstride_neck_platform Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.navigation_platform.html" title="feathersdk.robot.navigation_platform Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.battery_system Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.battery_system">
+<span id="feathersdk-robot-battery-system-module"></span><h1>feathersdk.robot.battery_system Module<a class="headerlink" href="#module-feathersdk.robot.battery_system" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">BatterySystem</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SteppableSystem</span></code></p>
+<p>Base class for battery monitoring and power event management.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem.add_power_event_listener">
+<span class="sig-name descname"><span class="pre">add_power_event_listener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">listener</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem.add_power_event_listener" title="Link to this definition">¶</a></dt>
+<dd><p>Add a power event listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>listener</strong> (<a class="reference internal" href="#feathersdk.robot.battery_system.PowerEventListener" title="feathersdk.robot.battery_system.PowerEventListener"><em>PowerEventListener</em></a>) – Listener to receive power event notifications</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem.get_battery_voltage">
+<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem.get_battery_voltage" title="Link to this definition">¶</a></dt>
+<dd><p>Get current battery voltage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Battery voltage in volts</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem.last_powered_up_time">
+<span class="sig-name descname"><span class="pre">last_powered_up_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem.last_powered_up_time" title="Link to this definition">¶</a></dt>
+<dd><p>Get the last time the system was powered up.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timestamp of last power-up event</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem.notify_power_event_listeners">
+<span class="sig-name descname"><span class="pre">notify_power_event_listeners</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent" title="feathersdk.robot.battery_system.PowerEvent"><span class="pre">PowerEvent</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem.notify_power_event_listeners" title="Link to this definition">¶</a></dt>
+<dd><p>Notify all registered listeners of a power event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent" title="feathersdk.robot.battery_system.PowerEvent"><em>PowerEvent</em></a>) – The power event to notify listeners about</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.BatterySystem.remove_power_event_listener">
+<span class="sig-name descname"><span class="pre">remove_power_event_listener</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">listener</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.BatterySystem.remove_power_event_listener" title="Link to this definition">¶</a></dt>
+<dd><p>Remove a power event listener.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>listener</strong> (<a class="reference internal" href="#feathersdk.robot.battery_system.PowerEventListener" title="feathersdk.robot.battery_system.PowerEventListener"><em>PowerEventListener</em></a>) – Listener to remove</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">DualBatterySystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">BatterySystem</span></code></a></p>
+<p>Battery system implementation for dual battery configuration with I2C monitoring.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.ADS1115_ADDR">
+<span class="sig-name descname"><span class="pre">ADS1115_ADDR</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">72</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.ADS1115_ADDR" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.CONFIG_REG">
+<span class="sig-name descname"><span class="pre">CONFIG_REG</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.CONFIG_REG" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.CONV_REG">
+<span class="sig-name descname"><span class="pre">CONV_REG</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.CONV_REG" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.ESTOP_VOLTAGE_THRESHOLD">
+<span class="sig-name descname"><span class="pre">ESTOP_VOLTAGE_THRESHOLD</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">45</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.ESTOP_VOLTAGE_THRESHOLD" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.I2C_DEV_BUS">
+<span class="sig-name descname"><span class="pre">I2C_DEV_BUS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.I2C_DEV_BUS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize dual battery system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary with optional keys:
+- rated_voltage: Battery rated voltage in volts (default: 48)
+- capacity_amp_hours: Battery capacity in amp-hours (default: 50)
+- num_batteries: Number of batteries (default: 2)</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If battery monitoring is not healthy</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.get_battery_voltage">
+<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.get_battery_voltage" title="Link to this definition">¶</a></dt>
+<dd><p>Get current battery voltage from I2C ADC.</p>
+<p>Reads voltage from ADS1115 ADC via I2C and applies scaling factors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Battery voltage in volts</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.get_estimated_battery_percentage">
+<span class="sig-name descname"><span class="pre">get_estimated_battery_percentage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.get_estimated_battery_percentage" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.is_estop_pressed">
+<span class="sig-name descname"><span class="pre">is_estop_pressed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.is_estop_pressed" title="Link to this definition">¶</a></dt>
+<dd><p>Check if emergency stop is pressed based on battery voltage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if battery voltage is below ESTOP threshold, False otherwise</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.last_powered_up_time">
+<span class="sig-name descname"><span class="pre">last_powered_up_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.last_powered_up_time" title="Link to this definition">¶</a></dt>
+<dd><p>Get the last time the system was powered up.</p>
+<p>Returns the maximum of current boot time and last estop release time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timestamp of last power-up event</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystem.update_power_state">
+<span class="sig-name descname"><span class="pre">update_power_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystem.update_power_state" title="Link to this definition">¶</a></dt>
+<dd><p>Update power state from system state file.</p>
+<p>Reads power state from JSON file and updates internal state variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>Exception</strong> – If battery monitoring is not healthy</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystemPico">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">DualBatterySystemPico</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystemPico" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Battery system implementation for dual battery configuration with Pico monitoring.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystemPico.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystemPico.close" title="Link to this definition">¶</a></dt>
+<dd><p>Close the serial port when done.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.DualBatterySystemPico.get_battery_voltage">
+<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.DualBatterySystemPico.get_battery_voltage" title="Link to this definition">¶</a></dt>
+<dd><p>Get current battery voltage from Pico.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.PowerEvent">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">PowerEvent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.PowerEvent" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Power system events.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.PowerEvent.POWER_OFF">
+<span class="sig-name descname"><span class="pre">POWER_OFF</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.PowerEvent.POWER_OFF" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.PowerEvent.POWER_RESTORED">
+<span class="sig-name descname"><span class="pre">POWER_RESTORED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.PowerEvent.POWER_RESTORED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.PowerEventListener">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">PowerEventListener</span></span><a class="headerlink" href="#feathersdk.robot.battery_system.PowerEventListener" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">ABC</span></code></p>
+<p>Abstract base class for power event listeners.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.PowerEventListener.on_power_event">
+<span class="property"><span class="k"><span class="pre">abstractmethod</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">on_power_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent" title="feathersdk.robot.battery_system.PowerEvent"><span class="pre">PowerEvent</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.PowerEventListener.on_power_event" title="Link to this definition">¶</a></dt>
+<dd><p>Handle power event notification.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>event</strong> (<a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent" title="feathersdk.robot.battery_system.PowerEvent"><em>PowerEvent</em></a>) – The power event that occurred</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.binary_search_max_above">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">binary_search_max_above</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.binary_search_max_above" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.find_pico_port">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">find_pico_port</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.find_pico_port" title="Link to this definition">¶</a></dt>
+<dd><p>Find the Raspberry Pi Pico port.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.i2c_read">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">i2c_read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.i2c_read" title="Link to this definition">¶</a></dt>
+<dd><p>Read data from I2C device register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bus</strong> – SMBus instance</p></li>
+<li><p><strong>addr</strong> – I2C device address</p></li>
+<li><p><strong>reg</strong> – Register address to read from</p></li>
+<li><p><strong>length</strong> – Number of bytes to read</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of bytes read from the register</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.battery_system.i2c_write">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.battery_system.</span></span><span class="sig-name descname"><span class="pre">i2c_write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.battery_system.i2c_write" title="Link to this definition">¶</a></dt>
+<dd><p>Write data to I2C device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bus</strong> – SMBus instance</p></li>
+<li><p><strong>addr</strong> – I2C device address</p></li>
+<li><p><strong>data</strong> – Data bytes to write</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.battery_system Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem"><code class="docutils literal notranslate"><span class="pre">BatterySystem</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem.add_power_event_listener"><code class="docutils literal notranslate"><span class="pre">BatterySystem.add_power_event_listener()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem.get_battery_voltage"><code class="docutils literal notranslate"><span class="pre">BatterySystem.get_battery_voltage()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem.last_powered_up_time"><code class="docutils literal notranslate"><span class="pre">BatterySystem.last_powered_up_time()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem.notify_power_event_listeners"><code class="docutils literal notranslate"><span class="pre">BatterySystem.notify_power_event_listeners()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.BatterySystem.remove_power_event_listener"><code class="docutils literal notranslate"><span class="pre">BatterySystem.remove_power_event_listener()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.ADS1115_ADDR"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.ADS1115_ADDR</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.CONFIG_REG"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.CONFIG_REG</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.CONV_REG"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.CONV_REG</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.ESTOP_VOLTAGE_THRESHOLD"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.ESTOP_VOLTAGE_THRESHOLD</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.I2C_DEV_BUS"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.I2C_DEV_BUS</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.__init__"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.get_battery_voltage"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.get_battery_voltage()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.get_estimated_battery_percentage"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.get_estimated_battery_percentage()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.is_estop_pressed"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.is_estop_pressed()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.last_powered_up_time"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.last_powered_up_time()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystem.update_power_state"><code class="docutils literal notranslate"><span class="pre">DualBatterySystem.update_power_state()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystemPico"><code class="docutils literal notranslate"><span class="pre">DualBatterySystemPico</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystemPico.close"><code class="docutils literal notranslate"><span class="pre">DualBatterySystemPico.close()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.DualBatterySystemPico.get_battery_voltage"><code class="docutils literal notranslate"><span class="pre">DualBatterySystemPico.get_battery_voltage()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent"><code class="docutils literal notranslate"><span class="pre">PowerEvent</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent.POWER_OFF"><code class="docutils literal notranslate"><span class="pre">PowerEvent.POWER_OFF</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEvent.POWER_RESTORED"><code class="docutils literal notranslate"><span class="pre">PowerEvent.POWER_RESTORED</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEventListener"><code class="docutils literal notranslate"><span class="pre">PowerEventListener</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.PowerEventListener.on_power_event"><code class="docutils literal notranslate"><span class="pre">PowerEventListener.on_power_event()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.binary_search_max_above"><code class="docutils literal notranslate"><span class="pre">binary_search_max_above()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.find_pico_port"><code class="docutils literal notranslate"><span class="pre">find_pico_port()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.i2c_read"><code class="docutils literal notranslate"><span class="pre">i2c_read()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.battery_system.i2c_write"><code class="docutils literal notranslate"><span class="pre">i2c_write()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.navigation_platform.html" title="previous chapter">feathersdk.robot.navigation_platform Module</a></li>
+      <li>Next: <a href="feathersdk.robot.robstride_neck_platform.html" title="next chapter">feathersdk.robot.robstride_neck_platform Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.battery_system.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

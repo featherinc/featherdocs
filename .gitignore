@@ -1,0 +1,3 @@
+# Sphinx incremental build artifacts (do not publish)
+.doctrees/
+.buildinfo.bak

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.navigation_platform Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.battery_system Module" href="feathersdk.robot.battery_system.html" />
+    <link rel="prev" title="feathersdk.robot.robot Module" href="feathersdk.robot.robot.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.battery_system.html" title="feathersdk.robot.battery_system Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.robot.html" title="feathersdk.robot.robot Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.navigation_platform Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.navigation_platform">
+<span id="feathersdk-robot-navigation-platform-module"></span><h1>feathersdk.robot.navigation_platform Module<a class="headerlink" href="#module-feathersdk.robot.navigation_platform" title="Link to this heading">¶</a></h1>
+<dl class="py exception">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.NavigationMotorError">
+<span class="property"><span class="k"><span class="pre">exception</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.navigation_platform.</span></span><span class="sig-name descname"><span class="pre">NavigationMotorError</span></span><a class="headerlink" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception raised when motor errors are detected during navigation commands.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.navigation_platform.</span></span><span class="sig-name descname"><span class="pre">ThreeWheelServeDrivePlatform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SteppableSystem</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.ALL_MOTORS">
+<span class="sig-name descname"><span class="pre">ALL_MOTORS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BwC',</span> <span class="pre">'BwR',</span> <span class="pre">'BwL',</span> <span class="pre">'BpC',</span> <span class="pre">'BpR',</span> <span class="pre">'BpL']</span></span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.ALL_MOTORS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.SPINNING_MOTORS">
+<span class="sig-name descname"><span class="pre">SPINNING_MOTORS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BpC',</span> <span class="pre">'BpR',</span> <span class="pre">'BpL']</span></span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.SPINNING_MOTORS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.TURNING_MOTORS">
+<span class="sig-name descname"><span class="pre">TURNING_MOTORS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['BwC',</span> <span class="pre">'BwR',</span> <span class="pre">'BwL']</span></span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.TURNING_MOTORS" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize three-wheel swerve drive navigation platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motors_manager</strong> (<a class="reference internal" href="feathersdk.robot.motors.html#feathersdk.robot.motors.MotorsManager" title="feathersdk.robot.motors.MotorsManager"><em>MotorsManager</em></a>) – Manager for motor communication</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dict with “motors” and “nav_planner” keys</p></li>
+<li><p><strong>power</strong> (<a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><em>BatterySystem</em></a><em>, </em><em>optional</em>) – Battery system instance for power management</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_drive_motor_current">
+<span class="sig-name descname"><span class="pre">disable_drive_motor_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_drive_motor_current" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_motors">
+<span class="sig-name descname"><span class="pre">disable_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_motors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_drive_motor_current">
+<span class="sig-name descname"><span class="pre">enable_drive_motor_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_drive_motor_current" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_motors">
+<span class="sig-name descname"><span class="pre">enable_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_motors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.get_system_state">
+<span class="sig-name descname"><span class="pre">get_system_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.get_system_state" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.health_check">
+<span class="sig-name descname"><span class="pre">health_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.health_check" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_aborting">
+<span class="sig-name descname"><span class="pre">is_aborting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_aborting" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_motors_enabled">
+<span class="sig-name descname"><span class="pre">is_motors_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_motors_enabled" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.load_calibration_data">
+<span class="sig-name descname"><span class="pre">load_calibration_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.load_calibration_data" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_fork">
+<span class="sig-name descname"><span class="pre">on_fork</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_fork" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_power_event">
+<span class="sig-name descname"><span class="pre">on_power_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_power_event" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.recalibrate">
+<span class="sig-name descname"><span class="pre">recalibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.recalibrate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.navigation_platform.</span></span><span class="sig-name descname"><span class="pre">VelocityNavigationPlanner</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nav_platform</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">NavigationPlanner</span></code></p>
+<p>Allows the robot to be controlled by a specified velocity.
+TODO: The name of this class is misleading. A Planner builds a plan but does not control the robot in pure terms.
+This should be called VelocityController to better represent its purpose. Leaving for now for backward compatibility.</p>
+<p>Developer Notes: Any public methods of this class should
+follow _validate_and_accept_command() pattern in existing methods to ensure safety and error handling.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.disable_motors">
+<span class="sig-name descname"><span class="pre">disable_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">is_power_off</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.disable_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Disable motors and clear command state.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>is_power_off</strong> (<em>bool</em>) – If True, motors are not disabled (for power-off scenarios)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.enable_motors">
+<span class="sig-name descname"><span class="pre">enable_motors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.enable_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Enable all navigation motors and verify they enter Run mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="feathersdk.comms.comms_manager.html#feathersdk.comms.comms_manager.UnknownInterfaceError" title="feathersdk.comms.comms_manager.UnknownInterfaceError"><strong>UnknownInterfaceError</strong></a> – If communication interface is not available, platform is disabled.</p></li>
+<li><p><strong>Exception</strong> – If enabling motors fails for any reason, platform is disabled.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.go_to">
+<span class="sig-name descname"><span class="pre">go_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degrees</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motors_is_on</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.go_to" title="Link to this definition">¶</a></dt>
+<dd><p>Set wheel orientation and speed for directional movement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>degrees</strong> (<em>float</em>) – Target wheel angle in degrees from -90 to 90 (0 = forward).
+All wheels will be turned to this angle.</p></li>
+<li><p><strong>speed</strong> (<em>float</em>) – Target linear speed in m/s, range -1.3 to 1.3 m/s.</p></li>
+<li><p><strong>motors_is_on</strong> (<em>bool</em>) – If False, enables motors before command. If True, assumes motors already enabled.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If degrees or speed are outside valid ranges</p></li>
+<li><p><strong>Exception</strong> – If platform not enabled or calibration state is unhealthy</p></li>
+<li><p><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="feathersdk.robot.navigation_platform.NavigationMotorError"><strong>NavigationMotorError</strong></a> – If motor errors occurred in previous step() execution</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For target angles of exactly -90 or +90, each turning motor will choose
+whichever angle is closer to its current position to minimize rotation. The speed
+sign is adjusted per motor accordingly to maintain the intended direction of travel.
+This optimization is applied in step() at execution time.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.is_at_target_position">
+<span class="sig-name descname"><span class="pre">is_at_target_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.is_at_target_position" title="Link to this definition">¶</a></dt>
+<dd><p>Check if robot is at target position.</p>
+<p>For velocity-based control, this always returns True as there is no discrete target position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Always True for velocity control mode</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_angle">
+<span class="sig-name descname"><span class="pre">orient_angle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">degrees</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_angle" title="Link to this definition">¶</a></dt>
+<dd><p>Set wheel orientation without changing speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>degrees</strong> (<em>float</em>) – Target angle in degrees from -90 to 90 (0 = forward, clockwise positive).</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If platform not enabled or calibration state is unhealthy</p></li>
+<li><p><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="feathersdk.robot.navigation_platform.NavigationMotorError"><strong>NavigationMotorError</strong></a> – If motor errors occurred in previous step() execution</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_rotate">
+<span class="sig-name descname"><span class="pre">orient_rotate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_rotate" title="Link to this definition">¶</a></dt>
+<dd><p>Orient wheels to rotation configuration and stop spinning motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Exception</strong> – If platform not enabled or calibration state is unhealthy</p></li>
+<li><p><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="feathersdk.robot.navigation_platform.NavigationMotorError"><strong>NavigationMotorError</strong></a> – If motor errors occurred in previous step() execution</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.rotate_in_place">
+<span class="sig-name descname"><span class="pre">rotate_in_place</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.rotate_in_place" title="Link to this definition">¶</a></dt>
+<dd><p>Rotate the robot in place by setting the speed of the spinning motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>speed</strong> (<em>float</em>) – The speed in degrees/second at which all the spinning motors will rotate.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>Exception</strong> – If platform not enabled or calibration state is unhealthy</p></li>
+<li><p><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="feathersdk.robot.navigation_platform.NavigationMotorError"><strong>NavigationMotorError</strong></a> – If motor errors occurred in previous step() execution</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_motor_shutdown_on_abort">
+<span class="sig-name descname"><span class="pre">set_motor_shutdown_on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shutdown_on_abort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_motor_shutdown_on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_speed">
+<span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_speed" title="Link to this definition">¶</a></dt>
+<dd><p>Set linear speed without changing wheel orientation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>speed</strong> (<em>float</em>) – Linear speed in m/s, range -1.3 to 1.3 m/s.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ValueError</strong> – If speed is outside valid range</p></li>
+<li><p><strong>Exception</strong> – If platform not enabled or calibration state is unhealthy</p></li>
+<li><p><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError" title="feathersdk.robot.navigation_platform.NavigationMotorError"><strong>NavigationMotorError</strong></a> – If motor errors occurred in previous step() execution</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.navigation_platform.VelocityNavigationPlanner.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.step" title="Link to this definition">¶</a></dt>
+<dd><p>Execute pending navigation commands and monitor feedback delays.</p>
+<p>When feedback delay is detected on any motor, the robot is stopped (zero velocity
+sent once) and the step loop is paused until delay clears. During pause, feedback
+is triggered (set_active_reporting(False)) so delay can be re-checked. No exception
+is raised; commands are not sent until pause ends.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.navigation_platform Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.NavigationMotorError"><code class="docutils literal notranslate"><span class="pre">NavigationMotorError</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.ALL_MOTORS"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.ALL_MOTORS</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.SPINNING_MOTORS"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.SPINNING_MOTORS</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.TURNING_MOTORS"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.TURNING_MOTORS</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.__init__"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_drive_motor_current"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.disable_drive_motor_current()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.disable_motors"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.disable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_drive_motor_current"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.enable_drive_motor_current()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.enable_motors"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.enable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.get_system_state"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.get_system_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.health_check"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.health_check()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_aborting"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.is_aborting()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.is_motors_enabled"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.is_motors_enabled()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.load_calibration_data"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.load_calibration_data()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_abort"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_fork"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.on_fork()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.on_power_event"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.on_power_event()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.ThreeWheelServeDrivePlatform.recalibrate"><code class="docutils literal notranslate"><span class="pre">ThreeWheelServeDrivePlatform.recalibrate()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.disable_motors"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.disable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.enable_motors"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.enable_motors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.go_to"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.go_to()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.is_at_target_position"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.is_at_target_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_angle"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.orient_angle()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.orient_rotate"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.orient_rotate()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.rotate_in_place"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.rotate_in_place()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_motor_shutdown_on_abort"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.set_motor_shutdown_on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.set_speed"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.set_speed()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.navigation_platform.VelocityNavigationPlanner.step"><code class="docutils literal notranslate"><span class="pre">VelocityNavigationPlanner.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.robot.html" title="previous chapter">feathersdk.robot.robot Module</a></li>
+      <li>Next: <a href="feathersdk.robot.battery_system.html" title="next chapter">feathersdk.robot.battery_system Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.navigation_platform.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

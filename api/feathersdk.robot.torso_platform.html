@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.torso_platform Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.gripper.i2rt_gripper Module" href="feathersdk.robot.gripper.i2rt_gripper.html" />
+    <link rel="prev" title="feathersdk.robot.manipulation_platform Module" href="feathersdk.robot.manipulation_platform.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.gripper.i2rt_gripper.html" title="feathersdk.robot.gripper.i2rt_gripper Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.manipulation_platform.html" title="feathersdk.robot.manipulation_platform Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.torso_platform Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.torso_platform">
+<span id="feathersdk-robot-torso-platform-module"></span><h1>feathersdk.robot.torso_platform Module<a class="headerlink" href="#module-feathersdk.robot.torso_platform" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionCommands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>EZMotion CANopen command addresses.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_CURRENT">
+<span class="sig-name descname"><span class="pre">GET_CURRENT_CURRENT</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24696</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_CURRENT" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_POSITION">
+<span class="sig-name descname"><span class="pre">GET_CURRENT_POSITION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24676</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_POSITION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_TORQUE">
+<span class="sig-name descname"><span class="pre">GET_CURRENT_TORQUE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24695</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_TORQUE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_VELOCITY">
+<span class="sig-name descname"><span class="pre">GET_CURRENT_VELOCITY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24684</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_VELOCITY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_ERROR_REGISTER">
+<span class="sig-name descname"><span class="pre">GET_ERROR_REGISTER</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8203</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_ERROR_REGISTER" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_STATUS_WORD">
+<span class="sig-name descname"><span class="pre">GET_STATUS_WORD</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24641</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_STATUS_WORD" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.GET_TEMPERATURE">
+<span class="sig-name descname"><span class="pre">GET_TEMPERATURE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8256</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_TEMPERATURE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.HOMING_ACCELERATION">
+<span class="sig-name descname"><span class="pre">HOMING_ACCELERATION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24730</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_ACCELERATION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.HOMING_METHOD">
+<span class="sig-name descname"><span class="pre">HOMING_METHOD</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24728</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_METHOD" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.HOMING_OFFSET">
+<span class="sig-name descname"><span class="pre">HOMING_OFFSET</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24700</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_OFFSET" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.HOMING_SPEED">
+<span class="sig-name descname"><span class="pre">HOMING_SPEED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24729</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_SPEED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.MAX_TORQUE">
+<span class="sig-name descname"><span class="pre">MAX_TORQUE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24690</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.MAX_TORQUE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_CONTROL_MODE">
+<span class="sig-name descname"><span class="pre">SET_CONTROL_MODE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24672</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_CONTROL_MODE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_ACCELERATION">
+<span class="sig-name descname"><span class="pre">SET_MAX_ACCELERATION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24707</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_ACCELERATION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_DECELERATION">
+<span class="sig-name descname"><span class="pre">SET_MAX_DECELERATION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24708</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_DECELERATION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_HOMING_TORQUE">
+<span class="sig-name descname"><span class="pre">SET_MAX_HOMING_TORQUE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8304</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_HOMING_TORQUE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_VELOCITY">
+<span class="sig-name descname"><span class="pre">SET_MAX_VELOCITY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24705</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_VELOCITY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_OPERATION_STATE">
+<span class="sig-name descname"><span class="pre">SET_OPERATION_STATE</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24640</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_OPERATION_STATE" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_POSITION">
+<span class="sig-name descname"><span class="pre">SET_POSITION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24698</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_POSITION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionCommands.SET_VELOCITY">
+<span class="sig-name descname"><span class="pre">SET_VELOCITY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">24831</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_VELOCITY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionControlMode">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionControlMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionControlMode" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>EZMotion motor control modes.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionControlMode.HOMING">
+<span class="sig-name descname"><span class="pre">HOMING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionControlMode.HOMING" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionControlMode.POSITION">
+<span class="sig-name descname"><span class="pre">POSITION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionControlMode.POSITION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionControlMode.VELOCITY">
+<span class="sig-name descname"><span class="pre">VELOCITY</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionControlMode.VELOCITY" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionHomingMethod">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionHomingMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>EZMotion homing methods.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_DOWN">
+<span class="sig-name descname"><span class="pre">HOME_USING_MAX_TORQUE_DOWN</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-2</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_DOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_UP">
+<span class="sig-name descname"><span class="pre">HOME_USING_MAX_TORQUE_UP</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-3</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_UP" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionMotor">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionMotor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">can_interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionMotor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="feathersdk.robot.motors.motor.html#feathersdk.robot.motors.motor.Motor" title="feathersdk.robot.motors.motor.Motor"><code class="xref py py-class docutils literal notranslate"><span class="pre">Motor</span></code></a></p>
+<p>EZMotion motor representation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionMotor.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">can_interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionMotor.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize EZMotion motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_id</strong> (<em>int</em>) – CAN node ID of the motor</p></li>
+<li><p><strong>can_interface</strong> (<em>str</em>) – CAN interface name</p></li>
+<li><p><strong>motor_name</strong> (<em>str</em>) – Name identifier for the motor</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – Motor configuration with optional keys:
+- default_target_velocity_rps: Default target velocity in rotations per second
+- default_target_acceleration_rps2: Default acceleration in rotations per second squared
+- default_target_deceleration_rps2: Default deceleration in rotations per second squared</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionOperationState">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionOperationState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionOperationState" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>EZMotion motor operation states.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionOperationState.ENABLED">
+<span class="sig-name descname"><span class="pre">ENABLED</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">15</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionOperationState.ENABLED" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionOperationState.SHUTDOWN">
+<span class="sig-name descname"><span class="pre">SHUTDOWN</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">6</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionOperationState.SHUTDOWN" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionOperationState.TRANSITION_TO_NEW_POSITION">
+<span class="sig-name descname"><span class="pre">TRANSITION_TO_NEW_POSITION</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">31</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionOperationState.TRANSITION_TO_NEW_POSITION" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">EZMotionTorsoPlatform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">can_interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform" title="feathersdk.robot.torso_platform.TorsoPlatform"><code class="xref py py-class docutils literal notranslate"><span class="pre">TorsoPlatform</span></code></a></p>
+<p>EZMotion-based torso platform implementation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">can_interface</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize EZMotion torso platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motors_manager</strong> (<a class="reference internal" href="feathersdk.robot.motors.html#feathersdk.robot.motors.MotorsManager" title="feathersdk.robot.motors.MotorsManager"><em>MotorsManager</em></a>) – Manager for motor communication</p></li>
+<li><p><strong>power</strong> (<a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><em>BatterySystem</em></a>) – Battery system for power event handling</p></li>
+<li><p><strong>can_interface</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – CAN interface name, or None to skip CAN initialization</p></li>
+<li><p><strong>config</strong> (<em>dict</em>) – Configuration dictionary with required “motors” key and optional keys:
+- top_height_mm: Maximum height in millimeters (default: 600)
+- bottom_height_mm: Minimum height in millimeters (default: 50)
+- homing_offset_from_top_num_rotations: Homing offset from top in rotations (default: 1)
+- homing_max_torque_percent: Maximum torque for homing in percent (default: 1000)
+- homing_acceleration: Homing acceleration in rotations per second squared (default: 50)
+- print_packet_loss: If True, print packet loss warnings (default: False)
+- show_all_sdo_errors: If True, show all SDO errors (default: True)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>Exception</strong> – If power cycle detected and system must be recalibrated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_max_height_target_position">
+<span class="sig-name descname"><span class="pre">calc_max_height_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_max_height_target_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_min_height_target_position">
+<span class="sig-name descname"><span class="pre">calc_min_height_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_min_height_target_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.canopen_thread_main">
+<span class="sig-name descname"><span class="pre">canopen_thread_main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.canopen_thread_main" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.clear_errors">
+<span class="sig-name descname"><span class="pre">clear_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.clear_errors" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable">
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable" title="Link to this definition">¶</a></dt>
+<dd><p>Enable motor operation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable_velocity_mode">
+<span class="sig-name descname"><span class="pre">enable_velocity_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable_velocity_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position">
+<span class="sig-name descname"><span class="pre">get_current_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position_with_retry">
+<span class="sig-name descname"><span class="pre">get_current_position_with_retry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position_with_retry" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_torque">
+<span class="sig-name descname"><span class="pre">get_current_torque</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_torque" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_velocity">
+<span class="sig-name descname"><span class="pre">get_current_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_velocity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_state" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_status_word">
+<span class="sig-name descname"><span class="pre">get_status_word</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_status_word" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.go_to">
+<span class="sig-name descname"><span class="pre">go_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.go_to" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.has_error">
+<span class="sig-name descname"><span class="pre">has_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.has_error" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.health_check">
+<span class="sig-name descname"><span class="pre">health_check</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.health_check" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.init_ezmotion">
+<span class="sig-name descname"><span class="pre">init_ezmotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.init_ezmotion" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_abort" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_fork">
+<span class="sig-name descname"><span class="pre">on_fork</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_fork" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_power_event">
+<span class="sig-name descname"><span class="pre">on_power_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_power_event" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.recalibrate">
+<span class="sig-name descname"><span class="pre">recalibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.recalibrate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.send_movement_profile">
+<span class="sig-name descname"><span class="pre">send_movement_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.send_movement_profile" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_control_mode">
+<span class="sig-name descname"><span class="pre">set_control_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_control_mode" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_movement_profile">
+<span class="sig-name descname"><span class="pre">set_movement_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_movement_profile" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.shutdown">
+<span class="sig-name descname"><span class="pre">shutdown</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.shutdown" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.transition_to_new_position">
+<span class="sig-name descname"><span class="pre">transition_to_new_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.transition_to_new_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_relative">
+<span class="sig-name descname"><span class="pre">update_relative</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_relative" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_velocity">
+<span class="sig-name descname"><span class="pre">update_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_velocity" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.EZMotionTorsoPlatform.wait_for_recalibration">
+<span class="sig-name descname"><span class="pre">wait_for_recalibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.wait_for_recalibration" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">TorsoPlatform</span></span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SteppableSystem</span></code></p>
+<p>Base class for torso platform control.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initialize torso platform.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.get_position">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.get_position" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.get_state">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.get_state" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.go_to">
+<span class="sig-name descname"><span class="pre">go_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">height_from_bottom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.go_to" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.health_check">
+<span class="property"><span class="k"><span class="pre">async</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">health_check</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.health_check" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.recalibrate">
+<span class="sig-name descname"><span class="pre">recalibrate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.recalibrate" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.TorsoPlatform.set_movement_profile">
+<span class="sig-name descname"><span class="pre">set_movement_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_velocity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_acceleration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_jerk</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.TorsoPlatform.set_movement_profile" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.overwrite_file">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">overwrite_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.overwrite_file" title="Link to this definition">¶</a></dt>
+<dd><p>Overwrite file with comma-separated data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – Path to the file to overwrite</p></li>
+<li><p><strong>data</strong> (<em>list</em>) – List of strings to write as comma-separated values</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="feathersdk.robot.torso_platform.read_array_from_file">
+<span class="sig-prename descclassname"><span class="pre">feathersdk.robot.torso_platform.</span></span><span class="sig-name descname"><span class="pre">read_array_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.torso_platform.read_array_from_file" title="Link to this definition">¶</a></dt>
+<dd><p>Read comma-separated values from file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> (<em>str</em>) – Path to the file to read</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of strings read from the file</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.torso_platform Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_CURRENT"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_CURRENT_CURRENT</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_POSITION"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_CURRENT_POSITION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_TORQUE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_CURRENT_TORQUE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_CURRENT_VELOCITY"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_CURRENT_VELOCITY</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_ERROR_REGISTER"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_ERROR_REGISTER</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_STATUS_WORD"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_STATUS_WORD</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.GET_TEMPERATURE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.GET_TEMPERATURE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_ACCELERATION"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.HOMING_ACCELERATION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_METHOD"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.HOMING_METHOD</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_OFFSET"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.HOMING_OFFSET</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.HOMING_SPEED"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.HOMING_SPEED</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.MAX_TORQUE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.MAX_TORQUE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_CONTROL_MODE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_CONTROL_MODE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_ACCELERATION"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_MAX_ACCELERATION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_DECELERATION"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_MAX_DECELERATION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_HOMING_TORQUE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_MAX_HOMING_TORQUE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_MAX_VELOCITY"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_MAX_VELOCITY</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_OPERATION_STATE"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_OPERATION_STATE</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_POSITION"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_POSITION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionCommands.SET_VELOCITY"><code class="docutils literal notranslate"><span class="pre">EZMotionCommands.SET_VELOCITY</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionControlMode"><code class="docutils literal notranslate"><span class="pre">EZMotionControlMode</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionControlMode.HOMING"><code class="docutils literal notranslate"><span class="pre">EZMotionControlMode.HOMING</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionControlMode.POSITION"><code class="docutils literal notranslate"><span class="pre">EZMotionControlMode.POSITION</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionControlMode.VELOCITY"><code class="docutils literal notranslate"><span class="pre">EZMotionControlMode.VELOCITY</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod"><code class="docutils literal notranslate"><span class="pre">EZMotionHomingMethod</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_DOWN"><code class="docutils literal notranslate"><span class="pre">EZMotionHomingMethod.HOME_USING_MAX_TORQUE_DOWN</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionHomingMethod.HOME_USING_MAX_TORQUE_UP"><code class="docutils literal notranslate"><span class="pre">EZMotionHomingMethod.HOME_USING_MAX_TORQUE_UP</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionMotor"><code class="docutils literal notranslate"><span class="pre">EZMotionMotor</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionMotor.__init__"><code class="docutils literal notranslate"><span class="pre">EZMotionMotor.__init__()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionOperationState"><code class="docutils literal notranslate"><span class="pre">EZMotionOperationState</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionOperationState.ENABLED"><code class="docutils literal notranslate"><span class="pre">EZMotionOperationState.ENABLED</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionOperationState.SHUTDOWN"><code class="docutils literal notranslate"><span class="pre">EZMotionOperationState.SHUTDOWN</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionOperationState.TRANSITION_TO_NEW_POSITION"><code class="docutils literal notranslate"><span class="pre">EZMotionOperationState.TRANSITION_TO_NEW_POSITION</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.__init__"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_max_height_target_position"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.calc_max_height_target_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.calc_min_height_target_position"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.calc_min_height_target_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.canopen_thread_main"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.canopen_thread_main()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.clear_errors"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.clear_errors()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.enable()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.enable_velocity_mode"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.enable_velocity_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_current_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_position_with_retry"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_current_position_with_retry()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_torque"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_current_torque()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_current_velocity"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_current_velocity()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_state"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.get_status_word"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.get_status_word()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.go_to"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.go_to()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.has_error"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.has_error()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.health_check"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.health_check()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.init_ezmotion"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.init_ezmotion()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_abort"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_fork"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.on_fork()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.on_power_event"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.on_power_event()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.recalibrate"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.recalibrate()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.send_movement_profile"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.send_movement_profile()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_control_mode"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.set_control_mode()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.set_movement_profile"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.set_movement_profile()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.shutdown"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.shutdown()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.transition_to_new_position"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.transition_to_new_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_relative"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.update_relative()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.update_velocity"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.update_velocity()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.EZMotionTorsoPlatform.wait_for_recalibration"><code class="docutils literal notranslate"><span class="pre">EZMotionTorsoPlatform.wait_for_recalibration()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.__init__"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.__init__()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.get_position"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.get_position()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.get_state"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.get_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.go_to"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.go_to()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.health_check"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.health_check()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.recalibrate"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.recalibrate()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.TorsoPlatform.set_movement_profile"><code class="docutils literal notranslate"><span class="pre">TorsoPlatform.set_movement_profile()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.overwrite_file"><code class="docutils literal notranslate"><span class="pre">overwrite_file()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.torso_platform.read_array_from_file"><code class="docutils literal notranslate"><span class="pre">read_array_from_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.manipulation_platform.html" title="previous chapter">feathersdk.robot.manipulation_platform Module</a></li>
+      <li>Next: <a href="feathersdk.robot.gripper.i2rt_gripper.html" title="next chapter">feathersdk.robot.gripper.i2rt_gripper Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.torso_platform.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

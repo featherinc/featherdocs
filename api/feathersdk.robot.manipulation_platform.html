@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>feathersdk.robot.manipulation_platform Module &#8212; Feather SDK 0.0.17 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d7e2fa82" />
+    <link rel="stylesheet" type="text/css" href="../_static/nameko.css?v=2296cfae" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0290a9a0" />
+    <script src="../_static/documentation_options.js?v=63b572e7"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="feathersdk.robot.torso_platform Module" href="feathersdk.robot.torso_platform.html" />
+    <link rel="prev" title="feathersdk.robot.arm_system Module" href="feathersdk.robot.arm_system.html" />
+   
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Lora:400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  </head><body>
+  
+  
+
+    <div class="related" role="navigation" aria-label="Related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.torso_platform.html" title="feathersdk.robot.torso_platform Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="feathersdk.robot.arm_system.html" title="feathersdk.robot.arm_system Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Feather SDK 0.0.17 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="feathersdk.html" >feathersdk Package</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="feathersdk.robot.html" accesskey="U">feathersdk.robot Package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">feathersdk.robot.manipulation_platform Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="module-feathersdk.robot.manipulation_platform">
+<span id="feathersdk-robot-manipulation-platform-module"></span><h1>feathersdk.robot.manipulation_platform Module<a class="headerlink" href="#module-feathersdk.robot.manipulation_platform" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">feathersdk.robot.manipulation_platform.</span></span><span class="sig-name descname"><span class="pre">BimanualManipulationPlatform</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.motors.motors_manager.html#feathersdk.robot.motors.motors_manager.MotorsManager" title="feathersdk.robot.motors.motors_manager.MotorsManager"><span class="pre">MotorsManager</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="feathersdk.robot.battery_system.html#feathersdk.robot.battery_system.BatterySystem" title="feathersdk.robot.battery_system.BatterySystem"><span class="pre">BatterySystem</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manipulator_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">SteppableSystem</span></code></p>
+<p>Coordinates left/right arms, optional hands/grippers, and shared stepping.</p>
+<p><code class="docutils literal notranslate"><span class="pre">subsystems</span></code> lists arms first, then any initialized manipulators, for <a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.start" title="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.start"><code class="xref py py-meth docutils literal notranslate"><span class="pre">start()</span></code></a>
+and <code class="xref py py-meth docutils literal notranslate"><span class="pre">_step()</span></code>.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.disable_arms">
+<span class="sig-name descname"><span class="pre">disable_arms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.disable_arms" title="Link to this definition">¶</a></dt>
+<dd><p>Disable left and right arms (compliance/stop via each <code class="xref py py-meth docutils literal notranslate"><span class="pre">ArmSystem.disable()</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.enable_arms">
+<span class="sig-name descname"><span class="pre">enable_arms</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.enable_arms" title="Link to this definition">¶</a></dt>
+<dd><p>Enable left and right arms (operation mode, with retries per <code class="xref py py-meth docutils literal notranslate"><span class="pre">ArmSystem.enable()</span></code>).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.freeze_current_arm_state">
+<span class="sig-name descname"><span class="pre">freeze_current_arm_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.freeze_current_arm_state" title="Link to this definition">¶</a></dt>
+<dd><p>Hold both arms at their current pose using the given operation gains.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>kp</strong> – Position gain forwarded to each <code class="xref py py-meth docutils literal notranslate"><span class="pre">ArmSystem.freeze_current_arm_state()</span></code>.</p></li>
+<li><p><strong>kd</strong> – Damping gain forwarded to each arm.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.get_state" title="Link to this definition">¶</a></dt>
+<dd><p>Merge <code class="xref py py-meth docutils literal notranslate"><span class="pre">ArmSystem.get_state()</span></code> for the right and left arms.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Motor name → per-motor snapshot (<code class="docutils literal notranslate"><span class="pre">temp</span></code>, <code class="docutils literal notranslate"><span class="pre">torque</span></code>, <code class="docutils literal notranslate"><span class="pre">angle</span></code>,
+<code class="docutils literal notranslate"><span class="pre">velocity</span></code>) as returned by each arm.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.is_calibrated">
+<span class="sig-name descname"><span class="pre">is_calibrated</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_right</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_left</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.is_calibrated" title="Link to this definition">¶</a></dt>
+<dd><p>Check if arms are calibrated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>check_right</strong> – Check right arm calibration state</p></li>
+<li><p><strong>check_left</strong> – Check left arm calibration state</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all specified arms are calibrated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.on_abort">
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.on_abort" title="Link to this definition">¶</a></dt>
+<dd><p>Disable both arms and tear down RH56F1 hands if they were initialized.</p>
+<p>RH56F1 EtherCAT masters are released via <code class="docutils literal notranslate"><span class="pre">destroy()</span></code> so a new robot instance
+can claim them after abort.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.start">
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.start" title="Link to this definition">¶</a></dt>
+<dd><p>Start this platform and call <code class="docutils literal notranslate"><span class="pre">start()</span></code> on any subsystem that defines it.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">feathersdk.robot.manipulation_platform Module</a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform</span></code></a><ul>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.disable_arms"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.disable_arms()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.enable_arms"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.enable_arms()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.freeze_current_arm_state"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.freeze_current_arm_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.get_state"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.get_state()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.is_calibrated"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.is_calibrated()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.on_abort"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.on_abort()</span></code></a></li>
+<li><a class="reference internal" href="#feathersdk.robot.manipulation_platform.BimanualManipulationPlatform.start"><code class="docutils literal notranslate"><span class="pre">BimanualManipulationPlatform.start()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div><h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation index</a><ul>
+  <li><a href="feathersdk.html">feathersdk Package</a><ul>
+  <li><a href="feathersdk.robot.html">feathersdk.robot Package</a><ul>
+      <li>Previous: <a href="feathersdk.robot.arm_system.html" title="previous chapter">feathersdk.robot.arm_system Module</a></li>
+      <li>Next: <a href="feathersdk.robot.torso_platform.html" title="next chapter">feathersdk.robot.torso_platform Module</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/feathersdk.robot.manipulation_platform.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  
+  </body>
+</html>

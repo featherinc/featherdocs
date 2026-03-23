@@ -1,0 +1,8 @@
+# feathersdk.robot.manipulation_platform Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.manipulation_platform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```

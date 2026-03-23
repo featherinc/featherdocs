@@ -1,0 +1,9 @@
+# feathersdk.robot.torso_platform Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.torso_platform
+   :members:
+   :show-inheritance:
+   :exclude-members: CanOpenConditionalCommand, CanOpenTransaction
+```
+
