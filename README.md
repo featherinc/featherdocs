@@ -1,3 +1,3 @@
 # featherdocs
 
-Static HTML for the Feather SDK docs, generated from [featheros](https://github.com/featherinc/featheros) (`docs/` Sphinx build). Published via GitHub Pages.
+Feather SDK 0.0.17 docs.
