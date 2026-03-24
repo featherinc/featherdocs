@@ -1,0 +1,17 @@
+# feathersdk.utils Package
+
+```{eval-rst}
+.. automodule:: feathersdk.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+## Modules
+
+```{toctree}
+:maxdepth: 2
+
+feathersdk.utils.common.md
+```
+

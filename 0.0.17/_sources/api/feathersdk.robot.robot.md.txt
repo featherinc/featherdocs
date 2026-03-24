@@ -1,0 +1,9 @@
+# feathersdk.robot.robot Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.robot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+

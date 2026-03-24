@@ -1,0 +1,26 @@
+# feathersdk.robot.motors Package
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.motors
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+## Modules
+
+```{toctree}
+:maxdepth: 2
+
+feathersdk.robot.motors.motor.md
+feathersdk.robot.motors.motors_manager.md
+```
+
+## Subpackages
+
+The motors package contains the following subpackages:
+- `robstride` - Robstride motor implementation
+- `ezmotion` - Ezmotion motor implementation  
+- `damiao` - Damiao motor implementation
+- `sim` - Simulation motor implementation
+

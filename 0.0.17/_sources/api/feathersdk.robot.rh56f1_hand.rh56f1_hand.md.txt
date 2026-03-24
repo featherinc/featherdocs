@@ -1,0 +1,9 @@
+# feathersdk.robot.rh56f1_hand.rh56f1_hand Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.rh56f1_hand.rh56f1_hand
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+

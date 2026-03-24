@@ -1,0 +1,9 @@
+# feathersdk.robot.gripper.i2rt_gripper Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.gripper.i2rt_gripper
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
