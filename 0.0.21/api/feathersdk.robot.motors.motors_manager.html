@@ -157,43 +157,114 @@ Handles caching the state of the motors.
 Abstractions to make it easy to work with motors.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop">
-<span class="sig-name descname"><span class="pre">activate_compliance_mode_deceleration_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">activate_compliance_mode_deceleration_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_stop_policy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.SafeStopPolicy" title="feathersdk.robot.motors.motors_manager.SafeStopPolicy"><span class="pre">SafeStopPolicy</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">SafeStopPolicy.COMPLIANCE_MODE</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.activate_compliance_mode_deceleration_stop" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.add_motors">
-<span class="sig-name descname"><span class="pre">add_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.add_motors" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">add_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motors_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">RobstrideMotor</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">family_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">family_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.FamilyConfig" title="feathersdk.robot.motors.motors_manager.FamilyConfig"><span class="pre">FamilyConfig</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.add_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Add a group of motors to the manager as a motor family.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motors_map</strong> – Dictionary mapping motor names to RobstrideMotor instances</p></li>
+<li><p><strong>family_name</strong> – Name identifier for this motor family</p></li>
+<li><p><strong>family_config</strong> – Configuration options for the motor family</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range">
-<span class="sig-name descname"><span class="pre">check_motors_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">check_motors_in_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_error</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.check_motors_in_range" title="Link to this definition">¶</a></dt>
+<dd><p>Check if motors are within valid range.</p>
+<p>Validates that motors’ current positions and optionally a target angle are within
+their calibrated limits (upper_limit and lower_limit).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_names</strong> – List of motor names to check</p></li>
+<li><p><strong>target_angle</strong> – Optional target angle to validate against limits</p></li>
+<li><p><strong>raise_error</strong> – If True, raise exceptions on violations; if False, return False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all motors are in range, False otherwise</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If target_angle is out of range and raise_error is True</p></li>
+<li><p><strong>Exception</strong> – If current motor position is out of range and raise_error is True</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main">
-<span class="sig-name descname"><span class="pre">compliance_mode_main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">compliance_mode_main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.compliance_mode_main" title="Link to this definition">¶</a></dt>
+<dd><p>Main loop for compliance mode that adjusts motor positions based on torque feedback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>family_name</strong> (<em>str</em>) – Name of the motor family</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.disable">
-<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.disable" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">disable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.disable" title="Link to this definition">¶</a></dt>
+<dd><p>Disable the specified motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> – Motor name (str) or motor ID (int)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.enable">
-<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.enable" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">enable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.enable" title="Link to this definition">¶</a></dt>
+<dd><p>Enable the specified motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> – Motor name or ID</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.find_motors">
-<span class="sig-name descname"><span class="pre">find_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.find_motors" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">find_motors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_not_found</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">progress</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.find_motors" title="Link to this definition">¶</a></dt>
+<dd><p>Find the motors on the physical CAN interfaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>names</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – The names of the motors to find. If not provided, find all motors in the motors map.</p></li>
+<li><p><strong>allow_not_found</strong> (<em>bool</em>) – If True, do not raise an error if a motor is not found.</p></li>
+<li><p><strong>progress</strong> (<em>bool</em>) – If True (and tqdm is installed), show a progress bar.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.get_motor">
-<span class="sig-name descname"><span class="pre">get_motor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.get_motor" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_motor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">RobstrideMotor</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.get_motor" title="Link to this definition">¶</a></dt>
+<dd><p>Get a motor instance by name or ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>int</em><em>]</em>) – Motor name or motor ID</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The RobstrideMotor instance</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#feathersdk.robot.motors.motors_manager.MotorNotFoundError" title="feathersdk.robot.motors.motors_manager.MotorNotFoundError"><strong>MotorNotFoundError</strong></a> – If the motor is not found in the motors map</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motor_families">
@@ -222,18 +293,32 @@ Abstractions to make it easy to work with motors.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode">
-<span class="sig-name descname"><span class="pre">motors_in_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">motors_in_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RobstrideMotorMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.motors_in_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Check if all specified motors are in the given run mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_names</strong> – List of motor names to check</p></li>
+<li><p><strong>mode</strong> – The run mode to check for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if all motors are in the specified mode, False otherwise</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_abort">
-<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_abort" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_abort" title="Link to this definition">¶</a></dt>
+<dd><p>Stop compliance mode for all motor families.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message">
-<span class="sig-name descname"><span class="pre">on_can_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_can_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SocketResult</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_can_message" title="Link to this definition">¶</a></dt>
+<dd><p>Callback to handle incoming CAN messages.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_fork">
@@ -242,93 +327,259 @@ Abstractions to make it easy to work with motors.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message">
-<span class="sig-name descname"><span class="pre">on_motor_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_motor_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SocketResult</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_motor_message" title="Link to this definition">¶</a></dt>
+<dd><p>Callback to handle incoming motor messages.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message">
-<span class="sig-name descname"><span class="pre">on_tcp_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_tcp_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SocketResult</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.on_tcp_message" title="Link to this definition">¶</a></dt>
+<dd><p>Callback to handle incoming TCP messages.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.operation_command">
-<span class="sig-name descname"><span class="pre">operation_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.operation_command" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">operation_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_torque</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_angle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_velocity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kd</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.operation_command" title="Link to this definition">¶</a></dt>
+<dd><p>Send an operation command to a motor with torque, angle, velocity, and PD gains.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Motor name (str) or motor ID (int)</p></li>
+<li><p><strong>target_torque</strong> – Target torque in Nm</p></li>
+<li><p><strong>target_angle</strong> – Target angle in radians</p></li>
+<li><p><strong>target_velocity</strong> – Target velocity in radians per second</p></li>
+<li><p><strong>kp</strong> – Proportional gain</p></li>
+<li><p><strong>kd</strong> – Derivative gain</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.ping">
-<span class="sig-name descname"><span class="pre">ping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.ping" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">ping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.ping" title="Link to this definition">¶</a></dt>
+<dd><p>Ping the motor to get back the current state of the motor.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async">
-<span class="sig-name descname"><span class="pre">read_current_state_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">read_current_state_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_async" title="Link to this definition">¶</a></dt>
+<dd><p>Asynchronously trigger a feedback frame from the motor and wait for fresh motor data.</p>
+<p>This method sends a command to the motor (via _disable_active_reporting) that triggers
+a feedback response. It then waits for the feedback frame to arrive and be processed,
+retrying the command if necessary.</p>
+<p>The method will retry sending the command every 100ms (10 iterations) if no feedback is
+received. After 300ms (30 iterations) with no feedback, a TimeoutError is raised to
+indicate that the motor is not responding. This ensures that stale feedback data is not
+used, as the method guarantees fresh feedback or an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> – Name or ID of the motor</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TimeoutError</strong> – If no feedback frame is received within 300ms (after up to 3 retries)</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method has a side-effect of disabling active reporting, which is not the true purpose.
+Since we are not using active reporting, this is not a problem for now.
+But if we start using active reporting, we need to revisit this. There was a Motor Data
+Save command in the Robstride manual for the motor, however, that did not work as expected.</p>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync">
-<span class="sig-name descname"><span class="pre">read_current_state_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">read_current_state_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_current_state_sync" title="Link to this definition">¶</a></dt>
+<dd><p>Asynchronously trigger a feedback frame from the motor and wait for fresh motor data.</p>
+<p>This method sends a command to the motor (via _disable_active_reporting) that triggers
+a feedback response. It then waits for the feedback frame to arrive and be processed,
+retrying the command if necessary.</p>
+<p>The method will retry sending the command every 100ms (10 iterations) if no feedback is
+received. After 300ms (30 iterations) with no feedback, a TimeoutError is raised to
+indicate that the motor is not responding. This ensures that stale feedback data is not
+used, as the method guarantees fresh feedback or an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> – Name or ID of the motor</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>TimeoutError</strong> – If no feedback frame is received within 300ms (after up to 3 retries)</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method has a side-effect of disabling active reporting, which is not the true purpose.
+Since we are not using active reporting, this is not a problem for now.
+But if we start using active reporting, we need to revisit this. There was a Motor Data
+Save command in the Robstride manual for the motor, however, that did not work as expected.</p>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param">
-<span class="sig-name descname"><span class="pre">read_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">read_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param" title="Link to this definition">¶</a></dt>
+<dd><p>Read a parameter from the specified motor.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async">
-<span class="sig-name descname"><span class="pre">read_param_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">read_param_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_async" title="Link to this definition">¶</a></dt>
+<dd><p>Asynchronously reads a motor parameter, waiting for the value to be updated.
+Replaces blocking time.sleep with non-blocking asyncio.sleep.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync">
-<span class="sig-name descname"><span class="pre">read_param_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">read_param_sync</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.read_param_sync" title="Link to this definition">¶</a></dt>
+<dd><p>Synchronously read a parameter from the motor, waiting for the value to be updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Motor name (str) or motor ID (int)</p></li>
+<li><p><strong>param_id</strong> – Parameter ID or name</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The parameter value</p>
+</dd>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>TimeoutError</strong> – If the parameter is not read within the timeout period</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle">
-<span class="sig-name descname"><span class="pre">recover_from_power_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">recover_from_power_cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.recover_from_power_cycle" title="Link to this definition">¶</a></dt>
+<dd><p>Recover motor calibration after a power cycle where the encoder was reset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name</strong> – Name of the motor to recover</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>UnsafeCommandError</strong> – If the motor is not a dual encoder motor or has no calibration</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands">
-<span class="sig-name descname"><span class="pre">send_operation_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">send_operation_commands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation_commands</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">RobstrideOperationCommand</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_compliance_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.send_operation_commands" title="Link to this definition">¶</a></dt>
+<dd><p>Send operation commands to multiple motors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>operation_commands</strong> – List of RobstrideOperationCommand instances to send</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode">
-<span class="sig-name descname"><span class="pre">set_run_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">set_run_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">run_mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">RobstrideRunMode</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_run_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Set the run mode for the specified motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Motor name (str) or motor ID (int)</p></li>
+<li><p><strong>run_mode</strong> – The run mode to set (Position, Operation, or Torque)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position">
-<span class="sig-name descname"><span class="pre">set_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">set_target_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_position</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_position" title="Link to this definition">¶</a></dt>
+<dd><p>Set the target position (loc_ref) for the specified motor.</p>
+<p>This is a convenience method that wraps write_param for setting loc_ref.
+It provides a clearer API for position control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Name or ID of the motor</p></li>
+<li><p><strong>target_position</strong> – Target position in radians</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>MotorDisabledError</strong> – If the motor is in Reset mode (disabled)</p></li>
+<li><p><strong>MotorModeInconsistentError</strong> – If the motor is not in Position run mode</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity">
-<span class="sig-name descname"><span class="pre">set_target_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">set_target_velocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_velocity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.set_target_velocity" title="Link to this definition">¶</a></dt>
+<dd><p>Set the target velocity (spd_ref) for the specified motor.</p>
+<p>This is a convenience method that wraps write_param for setting spd_ref.
+It provides a clearer API for velocity control.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Name or ID of the motor</p></li>
+<li><p><strong>target_velocity</strong> – Target velocity in radians per second</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>MotorDisabledError</strong> – If the motor is in Reset mode (disabled)</p></li>
+<li><p><strong>MotorModeInconsistentError</strong> – If the motor is not in Speed run mode</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode">
-<span class="sig-name descname"><span class="pre">stop_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">stop_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.stop_compliance_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Stop compliance mode for all motors in the specified family.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>family_name</strong> (<em>str</em>) – Name of the motor family</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode">
-<span class="sig-name descname"><span class="pre">trigger_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">trigger_compliance_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">family_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">motor_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.trigger_compliance_mode" title="Link to this definition">¶</a></dt>
+<dd><p>Enable compliance mode for all motors in the specified family.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>family_name</strong> (<em>str</em>) – Name of the motor family</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.write_param">
-<span class="sig-name descname"><span class="pre">write_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.write_param" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">write_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.write_param" title="Link to this definition">¶</a></dt>
+<dd><p>Write a parameter value to the specified motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>motor_name_or_id</strong> – Name or ID of the motor</p></li>
+<li><p><strong>param_id</strong> – Parameter ID</p></li>
+<li><p><strong>param_value</strong> – Parameter value</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.motors.motors_manager.MotorsManager.zero_position">
-<span class="sig-name descname"><span class="pre">zero_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.zero_position" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">zero_position</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">motor_name_or_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#feathersdk.robot.motors.motors_manager.MotorsManager.zero_position" title="Link to this definition">¶</a></dt>
+<dd><p>Set the current position of the motor as zero.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>motor_name_or_id</strong> – Motor name (str) or motor ID (int)</p>
+</dd>
+</dl>
+</dd></dl>
 
 </dd></dl>
 

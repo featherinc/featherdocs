@@ -81,18 +81,29 @@ registers systems with power event listeners if battery system is configured.</p
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.clear_motor_errors">
-<span class="sig-name descname"><span class="pre">clear_motor_errors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.clear_motor_errors" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">clear_motor_errors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.clear_motor_errors" title="Link to this definition">¶</a></dt>
+<dd><p>Clear all motor errors. Returns True if any errors were cleared, False otherwise.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.get_battery_voltage">
-<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.get_battery_voltage" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_battery_voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.get_battery_voltage" title="Link to this definition">¶</a></dt>
+<dd><p>Get battery voltage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Battery voltage in volts (currently returns 0)</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.FeatherRobot.on_abort">
-<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.on_abort" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.FeatherRobot.on_abort" title="Link to this definition">¶</a></dt>
+<dd><p>Handle system abort and stop all systems.</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -103,23 +114,27 @@ registers systems with power event listeners if battery system is configured.</p
 <p>Base robot class for managing multiple systems and control loops.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.on_abort">
-<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.on_abort" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">on_abort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">signal</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frame</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.on_abort" title="Link to this definition">¶</a></dt>
+<dd><p>Handle system abort and stop all systems.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.robot_loop">
-<span class="sig-name descname"><span class="pre">robot_loop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.robot_loop" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">robot_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.robot_loop" title="Link to this definition">¶</a></dt>
+<dd><p>Run the main robot control loop until aborted.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.start">
-<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">start</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start" title="Link to this definition">¶</a></dt>
+<dd><p>Start the robot and all registered systems.</p>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="feathersdk.robot.robot.Robot.start_loop_in_background">
-<span class="sig-name descname"><span class="pre">start_loop_in_background</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start_loop_in_background" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">start_loop_in_background</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#feathersdk.robot.robot.Robot.start_loop_in_background" title="Link to this definition">¶</a></dt>
+<dd><p>Start the robot control loop in a background thread.</p>
+</dd></dl>
 
 </dd></dl>
 
