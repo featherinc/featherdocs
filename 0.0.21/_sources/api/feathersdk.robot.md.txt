@@ -1,0 +1,33 @@
+# feathersdk.robot Package
+
+```{eval-rst}
+.. automodule:: feathersdk.robot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+## Modules
+
+```{toctree}
+:maxdepth: 2
+
+feathersdk.robot.robot.md
+feathersdk.robot.navigation_platform.md
+feathersdk.robot.battery_system.md
+feathersdk.robot.robstride_neck_platform.md
+feathersdk.robot.arm_system.md
+feathersdk.robot.manipulation_platform.md
+feathersdk.robot.torso_platform.md
+feathersdk.robot.gripper.i2rt_gripper.md
+feathersdk.robot.rh56f1_hand.rh56f1_hand.md
+```
+
+## Subpackages
+
+```{toctree}
+:maxdepth: 2
+
+feathersdk.robot.motors.md
+```
+

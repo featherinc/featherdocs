@@ -1,0 +1,22 @@
+# feathersdk.comms Package
+
+```{eval-rst}
+.. automodule:: feathersdk.comms
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+## Modules
+
+```{toctree}
+:maxdepth: 2
+
+feathersdk.comms.comms_manager.md
+```
+
+## Subpackages
+
+The comms package contains the following subpackages:
+- `socketcan_tcp` - SocketCAN TCP communication implementation
+

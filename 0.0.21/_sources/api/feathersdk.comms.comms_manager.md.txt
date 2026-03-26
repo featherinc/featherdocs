@@ -1,0 +1,9 @@
+# feathersdk.comms.comms_manager Module
+
+```{eval-rst}
+.. automodule:: feathersdk.comms.comms_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+

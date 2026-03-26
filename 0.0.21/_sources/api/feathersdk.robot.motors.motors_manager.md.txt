@@ -1,0 +1,9 @@
+# feathersdk.robot.motors.motors_manager Module
+
+```{eval-rst}
+.. automodule:: feathersdk.robot.motors.motors_manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
